@@ -1885,7 +1885,7 @@
                 {
                     "name": "QuickMapFilter",
                     "type": "int",
-                    "value": 9,
+                    "value": 4,
                     "default_value": 6,
                     "min_value": 0,
                     "max_value": 16,
@@ -1894,7 +1894,7 @@
                 {
                     "name": "CustomMapFilter",
                     "type": "int",
-                    "value": 0,
+                    "value": 78604,
                     "default_value": 0,
                     "min_value": 0,
                     "max_value": 1000000,
