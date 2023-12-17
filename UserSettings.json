@@ -298,8 +298,8 @@
                     "name": "CrowdDensity",
                     "type": "name_list",
                     "is_dynamic": false,
-                    "value": "Low",
-                    "index": 0,
+                    "value": "Medium",
+                    "index": 1,
                     "default_index": 2,
                     "values": [
                         "Low",
@@ -404,8 +404,8 @@
                     "name": "ResolutionScaling",
                     "type": "string_list",
                     "is_dynamic": false,
-                    "value": "Off",
-                    "index": 0,
+                    "value": "FSR",
+                    "index": 2,
                     "default_index": 0,
                     "values": [
                         "Off",
@@ -470,8 +470,8 @@
                     "name": "FSR2",
                     "type": "string_list",
                     "is_dynamic": false,
-                    "value": "Auto",
-                    "index": 0,
+                    "value": "Balanced",
+                    "index": 2,
                     "default_index": 0,
                     "values": [
                         "Auto",
@@ -485,7 +485,7 @@
                 {
                     "name": "FSR2_Sharpness",
                     "type": "float",
-                    "value": 0.5,
+                    "value": 0.6500000357,
                     "default_value": 0.5,
                     "min_value": 0.0,
                     "max_value": 1.0,
@@ -1362,7 +1362,7 @@
                 {
                     "name": "MaximumFPS_Value",
                     "type": "int",
-                    "value": 60,
+                    "value": 50,
                     "default_value": 30,
                     "min_value": 10,
                     "max_value": 240,
@@ -1546,8 +1546,8 @@
                     "name": "LocalShadowsQuality",
                     "type": "string_list",
                     "is_dynamic": false,
-                    "value": "Medium",
-                    "index": 2,
+                    "value": "Low",
+                    "index": 1,
                     "default_index": 0,
                     "values": [
                         "Off",
@@ -1586,8 +1586,8 @@
                     "name": "DistantShadowsResolution",
                     "type": "string_list",
                     "is_dynamic": false,
-                    "value": "High",
-                    "index": 1,
+                    "value": "Low",
+                    "index": 0,
                     "default_index": 0,
                     "values": [
                         "Low",
@@ -1598,8 +1598,8 @@
                     "name": "VolumetricFogResolution",
                     "type": "string_list",
                     "is_dynamic": false,
-                    "value": "High",
-                    "index": 2,
+                    "value": "Medium",
+                    "index": 1,
                     "default_index": 1,
                     "values": [
                         "Low",
@@ -1669,8 +1669,8 @@
                     "name": "AmbientOcclusion",
                     "type": "string_list",
                     "is_dynamic": false,
-                    "value": "High",
-                    "index": 3,
+                    "value": "Low",
+                    "index": 1,
                     "default_index": 1,
                     "values": [
                         "Off",
@@ -1762,8 +1762,8 @@
                     "name": "CrowdDensity",
                     "type": "name_list",
                     "is_dynamic": false,
-                    "value": "Low",
-                    "index": 0,
+                    "value": "Medium",
+                    "index": 1,
                     "default_index": 2,
                     "values": [
                         "Low",
@@ -2292,8 +2292,8 @@
                     "name": "ChattersTextSize",
                     "type": "int_list",
                     "is_dynamic": false,
-                    "value": 42,
-                    "index": 2,
+                    "value": 56,
+                    "index": 3,
                     "default_index": 0,
                     "values": [
                         32,
@@ -2306,7 +2306,7 @@
                 {
                     "name": "BackgroundOpacity",
                     "type": "float",
-                    "value": 30.0,
+                    "value": 40.0,
                     "default_value": 30.0,
                     "min_value": 0.0,
                     "max_value": 100.0,
@@ -2341,13 +2341,13 @@
                 {
                     "name": "DepthOfField",
                     "type": "bool",
-                    "value": false,
+                    "value": true,
                     "default_value": true
                 },
                 {
                     "name": "LensFlares",
                     "type": "bool",
-                    "value": true,
+                    "value": false,
                     "default_value": true
                 },
                 {
