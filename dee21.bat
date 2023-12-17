@@ -7,4 +7,4 @@ git push
 git checkout dee21
 pushd "C:\Games\Cyberpunk 2077\bin\x64"
 cd "C:\Games\Cyberpunk 2077\bin\x64"
-start "C:\Games\Cyberpunk 2077\bin\x64\Cyberpunk2077.exe"
+start Cyberpunk2077.exe
