@@ -86,7 +86,7 @@
                 {
                     "name": "MasterVolume",
                     "type": "int",
-                    "value": 50,
+                    "value": 80,
                     "default_value": 100,
                     "min_value": 0,
                     "max_value": 100,
@@ -1356,13 +1356,13 @@
                 {
                     "name": "MaximumFPS_OnOff",
                     "type": "bool",
-                    "value": false,
+                    "value": true,
                     "default_value": false
                 },
                 {
                     "name": "MaximumFPS_Value",
                     "type": "int",
-                    "value": 30,
+                    "value": 60,
                     "default_value": 30,
                     "min_value": 10,
                     "max_value": 240,
