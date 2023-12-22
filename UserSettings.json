@@ -951,7 +951,7 @@
                 {
                     "name": "visionToggle",
                     "type": "name",
-                    "value": "IK_CapsLock",
+                    "value": "IK_Backspace",
                     "default_value": "IK_CapsLock"
                 },
                 {
@@ -2442,7 +2442,7 @@
                 {
                     "name": "vehicleLeanBackward",
                     "type": "name",
-                    "value": "IK_LControl",
+                    "value": "IK_CapsLock",
                     "default_value": "IK_LControl"
                 },
                 {
@@ -2454,7 +2454,7 @@
                 {
                     "name": "vehicleReverseCam",
                     "type": "name",
-                    "value": "IK_MiddleMouse",
+                    "value": "IK_LControl",
                     "default_value": "IK_MiddleMouse"
                 },
                 {
@@ -2508,7 +2508,7 @@
                 {
                     "name": "vehicleShootTertiary",
                     "type": "name",
-                    "value": "IK_LControl",
+                    "value": "IK_T",
                     "default_value": "IK_LControl"
                 },
                 {
