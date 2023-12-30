@@ -86,7 +86,7 @@
                 {
                     "name": "MasterVolume",
                     "type": "int",
-                    "value": 100,
+                    "value": 30,
                     "default_value": 100,
                     "min_value": 0,
                     "max_value": 100,
@@ -485,7 +485,7 @@
                 {
                     "name": "FSR2_Sharpness",
                     "type": "float",
-                    "value": 0.6500000357,
+                    "value": 0.75,
                     "default_value": 0.5,
                     "min_value": 0.0,
                     "max_value": 1.0,
@@ -1231,7 +1231,7 @@
                 {
                     "name": "QuickMapFilter",
                     "type": "int",
-                    "value": 16,
+                    "value": 4,
                     "default_value": 6,
                     "min_value": 0,
                     "max_value": 16,
@@ -1240,7 +1240,7 @@
                 {
                     "name": "CustomMapFilter",
                     "type": "int",
-                    "value": 78604,
+                    "value": 1127180,
                     "default_value": 0,
                     "min_value": 0,
                     "max_value": 1000000,
@@ -1506,7 +1506,7 @@
                 {
                     "name": "ContactShadows",
                     "type": "bool",
-                    "value": true,
+                    "value": false,
                     "default_value": true
                 },
                 {
