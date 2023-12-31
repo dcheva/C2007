@@ -86,7 +86,7 @@
                 {
                     "name": "MasterVolume",
                     "type": "int",
-                    "value": 30,
+                    "value": 70,
                     "default_value": 100,
                     "min_value": 0,
                     "max_value": 100,
@@ -1506,7 +1506,7 @@
                 {
                     "name": "ContactShadows",
                     "type": "bool",
-                    "value": false,
+                    "value": true,
                     "default_value": true
                 },
                 {
