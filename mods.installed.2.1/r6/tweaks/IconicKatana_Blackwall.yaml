@@ -1,0 +1,391 @@
+## Author: xDebugger21
+#---------------------------------------------------
+Items.Preset_Katana_Saburo_Blackwall:
+  $base: Items.Preset_Katana_Saburo
+  $type: gamedataWeaponItem_Record
+  displayName: katana_satori
+  localizedDescription: katana_desc_satori
+  fxPackage: WeaponFxPackage.KatanaBWFxPackage
+  blueprint: Items.Collectible_Blade_Blueprint
+  quality: Quality.LegendaryPlusPlus
+  statModifiers:
+    - !append Quality.IconicItem
+  slotPartListPreset: 
+    - !remove Items.Preset_Katana_Saburo_inline4
+    - !append Items.Preset_KatanaBlackwallSaburo
+    
+Items.Preset_KatanaBlackwallSaburo:
+  $base: Items.Preset_Katana_Saburo_inline4
+  $type: gamedataSlotItemPartPreset_Record
+  itemPartPreset: Items.KatanaBWWeaponModSaburo
+
+Items.KatanaBWWeaponModSaburo:
+  $base: Items.SaburoKatanaWeaponMod
+  $type: gamedataItem_Record
+  OnAttach:
+    - !append Items.KatanaBWWeaponModAbility
+
+
+#---------------------------------------------------
+Items.Preset_Katana_Wakako_Blackwall:
+  $base: Items.Preset_Katana_Wakako
+  $type: gamedataWeaponItem_Record
+  displayName: katana_byakko
+  localizedDescription: katana_desc_byakko
+  fxPackage: WeaponFxPackage.KatanaBWFxPackage
+  blueprint: Items.Collectible_Blade_Blueprint
+  quality: Quality.LegendaryPlusPlus
+  statModifiers:
+    - !append Quality.IconicItem
+  slotPartListPreset: 
+    - !remove Items.Preset_Katana_Wakako_inline4
+    - !append Items.Preset_KatanaBlackwallWakako
+    
+Items.Preset_KatanaBlackwallWakako:
+  $base: Items.Preset_Katana_Wakako_inline4
+  $type: gamedataSlotItemPartPreset_Record
+  itemPartPreset: Items.KatanaBWWeaponModWakako
+
+Items.KatanaBWWeaponModWakako:
+  $base: Items.WakakoKatanaWeaponMod
+  $type: gamedataItem_Record
+  OnAttach:
+    - !append Items.KatanaBWWeaponModAbility
+    
+    
+#---------------------------------------------------
+Items.Preset_Katana_Hiromi_Blackwall:
+  $base: Items.Preset_Katana_Hiromi
+  $type: gamedataWeaponItem_Record
+  displayName: katana_tsumetogi
+  localizedDescription: katana_desc_tsumetogi
+  fxPackage: WeaponFxPackage.KatanaBWFxPackage
+  blueprint: Items.Collectible_Blade_Blueprint
+  quality: Quality.LegendaryPlusPlus
+  statModifiers:
+    - !append Quality.IconicItem
+  slotPartListPreset: 
+    - !remove Items.Preset_Katana_Hiromi_inline4
+    - !append Items.Preset_KatanaBlackwallHiromi
+
+Items.Preset_KatanaBlackwallHiromi:
+  $base: Items.Preset_Katana_Hiromi_inline4
+  $type: gamedataSlotItemPartPreset_Record
+  itemPartPreset: Items.KatanaBWWeaponModHiromi
+
+Items.KatanaBWWeaponModHiromi:
+  $base: Items.HiromiKatanaWeaponMod
+  $type: gamedataItem_Record
+  OnAttach:
+    - !append Items.KatanaBWWeaponModAbility
+    
+
+#---------------------------------------------------    
+Items.Preset_Katana_Takemura_Blackwall:
+  $base: Items.Preset_Katana_Takemura
+  $type: gamedataWeaponItem_Record
+  displayName: katana_jinchu
+  localizedDescription: katana_desc_jinchu
+  fxPackage: WeaponFxPackage.KatanaBWFxPackage
+  blueprint: Items.Collectible_Blade_Blueprint
+  quality: Quality.LegendaryPlusPlus
+  statModifiers:
+    - !append Quality.IconicItem
+  slotPartListPreset: 
+    - !remove Items.Preset_Katana_Takemura_inline3
+    - !append Items.Preset_KatanaBlackwallTakemura
+
+Items.Preset_KatanaBlackwallTakemura:
+  $base: Items.Preset_Katana_Takemura_inline3
+  $type: gamedataSlotItemPartPreset_Record
+  itemPartPreset: Items.KatanaBWWeaponModTakemura
+
+Items.KatanaBWWeaponModTakemura:
+  $base: Items.TakemuraKatanaWeaponMod
+  $type: gamedataItem_Record
+  OnAttach:
+    - !append Items.KatanaBWWeaponModAbility
+    
+
+#---------------------------------------------------
+Items.Preset_Katana_Surgeon_Blackwall:
+  $base: Items.Preset_Katana_Surgeon
+  $type: gamedataWeaponItem_Record
+  displayName: katana_scalpel
+  localizedDescription: katana_desc_scalpel
+  fxPackage: WeaponFxPackage.KatanaBWFxPackage
+  blueprint: Items.Collectible_Blade_Blueprint
+  quality: Quality.LegendaryPlusPlus
+  statModifiers:
+    - !append Quality.IconicItem
+  slotPartListPreset: 
+    - !remove Items.Preset_Katana_Surgeon_inline4
+    - !append Items.Preset_KatanaBlackwallSurgeon
+
+Items.Preset_KatanaBlackwallSurgeon:
+  $base: Items.Preset_Katana_Surgeon_inline4
+  $type: gamedataSlotItemPartPreset_Record
+  itemPartPreset: Items.KatanaBWWeaponModSurgeon
+
+Items.KatanaBWWeaponModSurgeon:
+  $base: Items.SurgeonKatanaWeaponMod
+  $type: gamedataItem_Record
+  OnAttach:
+    - !append Items.KatanaBWWeaponModAbility
+    
+
+#---------------------------------------------------
+Items.Preset_Katana_Cocktail_Blackwall:
+  $base: Items.Preset_Katana_Cocktail
+  $type: gamedataWeaponItem_Record
+  displayName: katana_cocktail
+  localizedDescription: katana_desc_cocktail
+  fxPackage: WeaponFxPackage.KatanaBWFxPackage
+  blueprint: Items.Collectible_Blade_Blueprint
+  quality: Quality.LegendaryPlusPlus
+  statModifiers:
+    - !append Quality.IconicItem
+  slotPartListPreset: 
+    - !remove Items.Preset_Katana_Cocktail_inline4
+    - !append Items.Preset_KatanaBlackwallCocktail
+    
+Items.Preset_KatanaBlackwallCocktail:
+  $base: Items.Preset_Katana_Cocktail_inline4
+  $type: gamedataSlotItemPartPreset_Record
+  itemPartPreset: Items.KatanaBWWeaponModCocktail
+
+Items.KatanaBWWeaponModCocktail:
+  $base: Items.CocktailStickWeaponMod
+  $type: gamedataItem_Record
+  OnAttach:
+    - !append Items.KatanaBWWeaponModAbility
+    
+
+#---------------------------------------------------
+Items.Preset_Katana_E3_Blackwall:
+  $base: Items.Preset_Katana_E3
+  $type: gamedataWeaponItem_Record
+  displayName: katana_errata
+  localizedDescription: katana_desc_errata
+  fxPackage: WeaponFxPackage.KatanaBWFxPackage
+  blueprint: Items.Collectible_Blade_Blueprint
+  quality: Quality.LegendaryPlusPlus
+  statModifiers:
+    - !append Quality.IconicItem
+  slotPartListPreset: 
+    - !remove Items.Preset_Katana_E3_inline4
+    - !append Items.Preset_KatanaBlackwallE3
+
+Items.Preset_KatanaBlackwallE3:
+  $base: Items.Preset_Katana_E3_inline4
+  $type: gamedataSlotItemPartPreset_Record
+  itemPartPreset: Items.KatanaBWWeaponModE3
+
+Items.KatanaBWWeaponModE3:
+  $base: Items.E3KatanaWeaponMod
+  $type: gamedataItem_Record
+  OnAttach:
+    - !append Items.KatanaBWWeaponModAbility
+    
+    
+#---------------------------------------------------
+Items.Preset_Sword_Witcher_Blackwall:
+  $base: Items.Preset_Sword_Witcher
+  $type: gamedataWeaponItem_Record
+  displayName: katana_gwynbleidd
+  localizedDescription: katana_desc_gwynbleidd
+  fxPackage: WeaponFxPackage.KatanaBWFxPackage
+  blueprint: Items.Collectible_Blade_Blueprint
+  quality: Quality.LegendaryPlusPlus
+  statModifiers:
+    - !append Quality.IconicItem
+  slotPartListPreset: 
+    - !remove Items.Preset_Sword_Witcher_inline3
+    - !append Items.Preset_KatanaBlackwallWitcher
+
+Items.Preset_KatanaBlackwallWitcher:
+  $base: Items.Preset_Sword_Witcher_inline3
+  $type: gamedataSlotItemPartPreset_Record
+  itemPartPreset: Items.KatanaBWWeaponModWitcher
+
+Items.KatanaBWWeaponModWitcher:
+  $base: Items.WitcherSwordWeaponMod
+  $type: gamedataItem_Record
+  OnAttach:
+    - !append Items.KatanaBWWeaponModAbility
+    
+
+#---------------------------------------------------
+Items.Preset_Katana_GoG_Blackwall:
+  $base: Items.Preset_Katana_GoG
+  $type: gamedataWeaponItem_Record
+  displayName: katana_unicorn
+  localizedDescription: katana_desc_unicorn
+  fxPackage: WeaponFxPackage.KatanaBWFxPackage
+  blueprint: Items.Collectible_Blade_Blueprint
+  quality: Quality.LegendaryPlusPlus
+  statModifiers:
+    - !append Quality.IconicItem
+  slotPartListPreset: 
+    - !remove Items.Preset_Katana_GoG_inline3
+    - !append Items.Preset_KatanaBlackwallGoG
+
+Items.Preset_KatanaBlackwallGoG:
+  $base: Items.Preset_Katana_GoG_inline3
+  $type: gamedataSlotItemPartPreset_Record
+  itemPartPreset: Items.KatanaBWWeaponModGoG
+
+Items.KatanaBWWeaponModGoG:
+  $base: Items.GogKatanaWeaponMod
+  $type: gamedataItem_Record
+  OnAttach:
+    - !append Items.KatanaBWWeaponModAbility
+    
+  
+#---------------------------------------------------    
+Items.KatanaBWWeaponModAbility:
+  $type: gamedataGameplayLogicPackage_Record
+  stackable: False
+  animationWrapperOverrides: []
+  effectors:
+    - Items.KatanaBWWeaponModAbility_inlineAE
+  
+Items.KatanaBWWeaponModAbility_inlineAE:
+  $type: gamedataAddStatusEffectToAttackEffector_Record
+  isRandom: True
+  stacks: 100
+  statusEffect: BaseStatusEffect.KatanaBlackwallUpload
+  effectorClassName: AddStatusEffectToAttackEffector
+  prereqRecord: Items.KatanaBWWeaponModAbility_inlineHitPrereq
+  removeAfterActionCall: False
+  removeAfterPrereqCheck: False
+  applicationChance:
+    - Items.Borg4aHauntedGunWeaponModAbility_inline6
+  statModifierGroups: []
+
+BaseStatusEffect.KatanaBlackwallUpload:
+  $base: BaseStatusEffect.HauntedGunBlackwallUpload
+  $type: gamedataStatusEffect_Record
+  AIData: BaseStatusEffect.KatanaBlackwallUpload_inlineAIDatareq
+
+BaseStatusEffect.KatanaBlackwallUpload_inlineAIDatareq:
+  $base: BaseStatusEffect.HauntedGunBlackwallUpload_inline6
+  $type: gamedataStatusEffectAIData_Record
+  priority: 1
+    
+Items.KatanaBWWeaponModAbility_inlineHitPrereq:
+  $type: gamedataHitPrereq_Record
+  callbackType: HitTriggered
+  ignoreSelfInflictedPressureWave: True
+  isSynchronous: True
+  pipelineStage: Process
+  pipelineType: Damage
+  prereqClassName: HitTriggeredPrereq
+  conditions:
+    - Perks.IsHitTargetAlive_inline0
+    - Perks.IsHitTargetAlive_inline1
+    - Perks.IsHitTargetAlive_inline2
+    - Items.Borg4aHauntedGunWeaponModAbility_inline2
+    - Items.Borg4aHauntedGunWeaponModAbility_inline5
+    - Items.KatanaBWWeaponModAbility_inlineWT
+    - Items.KatanaBWWeaponModAbility_inlineAT
+  processMiss: False
+  
+Items.KatanaBWWeaponModAbility_inlineWT:
+  $type: gamedataHitPrereqCondition_Record
+  invert: False
+  onlyOncePerShot: False
+  type: Prereqs.WeaponType
+  weaponType: Melee
+  
+Items.KatanaBWWeaponModAbility_inlineAT:
+  $type: gamedataHitPrereqCondition_Record
+  invert: False
+  onlyOncePerShot: False
+  type: Prereqs.AttackType
+  attackType: Melee
+  
+WeaponFxPackage.KatanaBWFxPackage:
+  $base: WeaponFxPackage.KatanaFxPackage
+  vfx_impact_add: ep1\fx\weapons\firearms\smg\midnight_borg4a\w_smg_borg4_blackwall_impact.effect
+  vfx_impact_add_enable: True
+  
+
+#---------------------------------------------------  
+Vendors.wat_lch_gunsmith_01:
+  itemStock:
+    - !append
+      item: Items.Preset_Katana_Saburo_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_Wakako_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_Hiromi_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_Takemura_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_Surgeon_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_Cocktail_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_E3_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Sword_Witcher_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_GoG_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+        
+Vendors.BlackMarketer_HUB:
+  itemStock:
+    - !append
+      item: Items.Preset_Katana_Saburo_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_Wakako_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_Hiromi_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_Takemura_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_Surgeon_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_Cocktail_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_E3_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Sword_Witcher_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present
+    - !append
+      item: Items.Preset_Katana_GoG_Blackwall
+      quantity: 
+        - !append Vendors.Always_Present

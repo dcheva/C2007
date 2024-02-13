@@ -1,0 +1,119 @@
+Items.HigurashiMantisBlades:
+  $base: Items.AdvancedMaxTacMantisBladesLegendary
+  displayName: LocKey#Higurashi-Name-Key
+  localizedDescription: LocKey#Higurashi-Desc-Key
+  nextUpgradeItem: Items.HigurashiMantisBladesPlus
+  OnAttach:
+    - !append Items.HigurashiMantisBladesAbility
+  statModifiers:
+    - !append
+      $type: ConstantStatModifier
+      statType: BaseStats.IsItemIconic
+      modifierType: Additive
+      value: 1
+    - !append
+      $type: ConstantStatModifier
+      statType: BaseStats.IconicItemUpgraded
+      modifierType: Additive
+      value: 0
+
+Items.HigurashiMantisBladesPlus:
+  $base: Items.HigurashiMantisBlades
+  quality: Quality.LegendaryPlus
+  nextUpgradeItem: Items.HigurashiMantisBladesPlusPlus
+
+Items.HigurashiMantisBladesPlusPlus:
+  $base: Items.HigurashiMantisBlades
+  quality: Quality.LegendaryPlusPlus
+  nextUpgradeItem:
+    - !remove Items.HigurashiMantisBladesPlus
+
+##############################################################################################################
+
+Items.HigurashiMantisBladesAbility:
+  $type: GameplayLogicPackage
+  effectors:
+    - !append Items.TakemuraKatanaWeaponModAbility_inline0  #Crit chance in optical camo
+    - !append Items.HigurashiMantisBladesAbility_inline0    #Crit damage in Sandevistan
+    - !append Items.HigurashiMantisBladesAbility_inline2    #Apply Hemorrhage on hit
+    - !append Items.SaburoKatanaWeaponModAbility_inline5    #Healing from Hemorrhage
+  UIData: Items.HigurashiMantisBladesAbility_inline6
+
+Items.HigurashiMantisBladesAbility_inline0:
+  $base: Items.SurgeonKatanaWeaponModAbility_inline0
+  effectorToApply: Items.HigurashiMantisBladesAbility_inline1
+
+Items.HigurashiMantisBladesAbility_inline1:
+  $type: ApplyStatGroupEffector
+  applicationTarget: Weapon
+  prereqRecord: Prereqs.AlwaysTruePrereq
+  removeWithEffector: True
+  statGroup: Items.HigurashiMantisBladesAbility_inline5
+
+Items.HigurashiMantisBladesAbility_inline2:
+  $base: Items.SaburoKatanaWeaponModAbility_inline1
+  prereqRecord: Items.HigurashiMantisBladesAbility_inline3
+
+Items.HigurashiMantisBladesAbility_inline3:
+  $base: Items.SaburoKatanaWeaponModAbility_inline2
+  conditions:
+    - !remove Items.SaburoKatanaWeaponModAbility_inline3
+    - !remove Items.SaburoKatanaWeaponModAbility_inline4
+    - !append Items.HigurashiMantisBladesAbility_inline4
+
+Items.HigurashiMantisBladesAbility_inline4:
+  $type: HitPrereqCondition
+  invert: False
+  onlyOncePerShot: False
+  type: Prereqs.AttackType
+  attackType: Melee
+
+Items.HigurashiMantisBladesAbility_inline5:
+  $type: StatModifierGroup
+  statModifiers:
+    - !append
+      $type: ConstantStatModifier
+      statType: BaseStats.CritDamage
+      modifierType: Additive
+      value: 50
+  statModsLimit: -1
+
+Items.HigurashiMantisBladesAbility_inline6:
+  $type: GameplayLogicPackageUIData
+  floatValues:
+    - !append 50
+    - !append 100
+  iconPath: ability_offensive
+  localizedDescription: LocKey#Higurashi-Effect-Desc-Key
+
+##############################################################################################################
+
+Vendors.pac_wwd_ripperdoc_01:
+  itemStock:
+    - !append Items.HigurashiMantisBlades_Stock
+
+Character.mq030_melisa:
+  lootDrop: Loot.HigurashiBlades
+
+Items.HigurashiMantisBlades_Stock:
+  $type: VendorItem
+  generationPrereqs:
+    - !append LootPrereqs.LegendaryCWLevelAvailabilityAtVendor
+  item: Items.HigurashiMantisBlades
+  quantity:
+    - !append Vendors.Always_Present
+
+Loot.HigurashiBlades:
+  $type: LootTable
+  lootGenerationType: dropChance
+  maxItemsToLoot: 1
+  lootItems:
+    - !append Loot.HigurashiBlades_inline1
+
+Loot.HigurashiBlades_inline1:
+  $type: LootItem
+  itemID: Items.HigurashiMantisBlades
+  dropChance: 1
+  dropCountMax: 1
+  dropCountMin: 1
+

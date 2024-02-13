@@ -1,0 +1,115 @@
+Items.MPProjectileLauncher:
+  $base: Items.AdvancedProjectileLauncherThermalLegendary
+  displayName: LocKey#MP-PLS-Name-Key
+  localizedDescription: LocKey#MP-PLS-Desc-Key
+  nextUpgradeItem: Items.MPProjectileLauncherPlus
+  OnEquip:
+    - !remove Items.AdvancedProjectileLauncherThermalUncommon_inline4
+    - !remove Items.AdvancedProjectileLauncherThermalUncommon_inline6
+    - !remove Attunements.IntelligenceArmsDamageTextOnly
+    #The array was redone to allow for proper formatting in-game
+    - !append Items.MPProjectileLauncher_inline1
+    - !append Items.AdvancedProjectileLauncherThermalUncommon_inline6
+    - !append Attunements.IntelligenceArmsDamageTextOnly
+  slotPartListPreset:
+    - !remove Items.AdvancedProjectileLauncherThermalUncommon_inline2
+    - !append Items.MPProjectileLauncher_inline0
+  statModifiers:
+    - !append
+      $type: ConstantStatModifier
+      statType: BaseStats.IsItemIconic
+      modifierType: Additive
+      value: 1
+    - !append
+      $type: ConstantStatModifier
+      statType: BaseStats.IconicItemUpgraded
+      modifierType: Additive
+      value: 0
+
+Items.MPProjectileLauncherPlus:
+  $base: Items.MPProjectileLauncher
+  quality: Quality.LegendaryPlus
+  nextUpgradeItem: Items.MPProjectileLauncherPlusPlus
+
+Items.MPProjectileLauncherPlusPlus:
+  $base: Items.MPProjectileLauncher
+  quality: Quality.LegendaryPlusPlus
+  nextUpgradeItem:
+    - !remove Items.MPProjectileLauncherPlus
+
+##############################################################################################################
+
+Items.MPProjectileLauncher_inline0:
+  $type: SlotItemPartPreset
+  itemPartPreset: Items.MPThermalDamageRound
+  slot: AttachmentSlots.ProjectileLauncherRound
+
+Items.MPThermalDamageRound:
+  $base: Items.ThermalDamageRound
+  attack: Attacks.MPThermalProjectile
+  relicAttack: Attacks.MPThermalProjectileGigaChadRelicCharged
+  secondaryAttack: Attacks.MPThermalProjectileCharged
+
+Attacks.MPThermalProjectile:
+  $base: Attacks.ThermalProjectile
+  statusEffects:
+    - !append Attacks.EMPGrenadeLegendary_inline0
+    - !append Attacks.FlashbangGrenadeLegendary_inline0
+
+Attacks.MPThermalProjectileCharged:
+  $base: Attacks.ThermalProjectileCharged
+  range: 5.5
+  statModifiers:
+    - !remove Attacks.ThermalProjectileCharged_inline0
+    - !append
+      $type: ConstantStatModifier
+      value: 0.350000012
+      modifierType: AdditiveMultiplier
+      statType: BaseStats.ThermalDamage
+  statusEffects:
+    - !append Attacks.EMPGrenadeLegendary_inline0
+    - !append Attacks.FlashbangGrenadeLegendary_inline0
+
+Attacks.MPThermalProjectileGigaChadRelicCharged:
+  $base: Attacks.ThermalProjectileGigaChadRelicCharged
+  range: 5.5
+  statModifiers:
+    - !remove Attacks.ThermalProjectileCharged_inline0
+    - !append
+      $type: ConstantStatModifier
+      value: 0.350000012
+      modifierType: AdditiveMultiplier
+      statType: BaseStats.ThermalDamage
+  statusEffects:
+    - !append Attacks.EMPGrenadeLegendary_inline0
+    - !append Attacks.FlashbangGrenadeLegendary_inline0
+
+Items.MPProjectileLauncher_inline1:
+  $type: GameplayLogicPackage
+  UIData: Items.MPProjectileLauncher_inline2
+
+Items.MPProjectileLauncher_inline2:
+  $type: GameplayLogicPackageUIData
+  floatValues:
+    - !append 35
+    - !append 30
+    - !append 30
+  localizedDescription: LocKey#MP-PLS-Effect-Desc-Key
+
+##############################################################################################################
+
+Vendors.cz_monument_ripperdoc_farida:
+  itemStock:
+    - !append Vendors.MPProjectileLauncher_Stock
+
+Vendors.pac_wwd_ripperdoc_01:
+  itemStock:
+    - !append Vendors.MPProjectileLauncher_Stock
+
+Vendors.MPProjectileLauncher_Stock:
+  $type: VendorItem
+  generationPrereqs:
+    - !append LootPrereqs.LegendaryCWLevelAvailabilityAtVendor
+  item: Items.MPProjectileLauncher
+  quantity:
+    - !append Vendors.Always_Present
