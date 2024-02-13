@@ -2,26 +2,27 @@
 	"RootType": "gameTelemetryPostMortemContainer",
 	"Data": {
 		"postMortem": {
-			"crashVisitId": "faedb6ed-88dc-47ea-baff-c61023c14dd5",
+			"crashVisitId": "a70e1cdd-88ac-4c58-8f2c-9b2cd3f9ad52",
 			"playthroughId": "65494799324c9ef6",
 			"crashVersion": "5022294",
 			"crashPatch": "2.11",
-			"timeCrash": "2024-02-13T10:21:07Z",
+			"timeCrash": "2024-02-13T10:24:49Z",
 			"trackedQuest": {
 				"name": "q112_02_industrial_park",
 				"objectiveName": "01a_meet_takemura",
 				"type": "Q",
+				"distance": 2721.000000,
 				"questName": "",
 				"questType": ""
 			},
 			"location": {
-				"X": 1813.974976,
-				"Y": 2273.508545,
-				"Z": 183.777832
+				"X": 1813.173340,
+				"Y": 2274.687744,
+				"Z": 183.778717
 			},
 			"district": "Badlands_RockyRidge",
 			"zoneType": "",
-			"sessionLength": 1115.890991,
+			"sessionLength": 132.901001,
 			"isOom": false
 		}
 	}
