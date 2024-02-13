@@ -1,5 +1,5 @@
 {
-    "version": 123,
+    "version": 126,
     "data": [
         {
             "group_name": "/controls/fppcameramouse",
@@ -121,6 +121,15 @@
                 },
                 {
                     "name": "CarRadioVolume",
+                    "type": "int",
+                    "value": 100,
+                    "default_value": 100,
+                    "min_value": 0,
+                    "max_value": 100,
+                    "step_value": 5
+                },
+                {
+                    "name": "RadioportVolume",
                     "type": "int",
                     "value": 100,
                     "default_value": 100,
@@ -338,6 +347,18 @@
                         "On",
                         "Off"
                     ]
+                },
+                {
+                    "name": "HybridUtilization",
+                    "type": "name_list",
+                    "is_dynamic": false,
+                    "value": "Auto",
+                    "index": 0,
+                    "default_index": 0,
+                    "values": [
+                        "Auto",
+                        "PrioritizePCores"
+                    ]
                 }
             ]
         },
@@ -391,6 +412,29 @@
             ]
         },
         {
+            "group_name": "/gameplay/radioport",
+            "options": [
+                {
+                    "name": "radioport_sync_to_car",
+                    "type": "bool",
+                    "value": true,
+                    "default_value": true
+                },
+                {
+                    "name": "radioport_enable_cycling",
+                    "type": "bool",
+                    "value": false,
+                    "default_value": false
+                },
+                {
+                    "name": "radioport_save_station",
+                    "type": "bool",
+                    "value": false,
+                    "default_value": false
+                }
+            ]
+        },
+        {
             "group_name": "/graphics/presets",
             "options": [
                 {
@@ -439,7 +483,8 @@
                         "Quality",
                         "Balanced",
                         "Performance",
-                        "Ultra Performance"
+                        "Ultra Performance",
+                        "Dynamic"
                     ]
                 },
                 {
@@ -649,9 +694,9 @@
                     "step_value": 5.0
                 },
                 {
-                    "name": "Axis_DeadzoneInner",
+                    "name": "Axis_DeadzoneInnerFix",
                     "type": "float",
-                    "value": 0.1000000014,
+                    "value": 0.349999994,
                     "default_value": 0.349999994,
                     "min_value": 0.0,
                     "max_value": 0.4900000095,
@@ -671,6 +716,15 @@
                     "type": "bool",
                     "value": false,
                     "default_value": false
+                },
+                {
+                    "name": "Axis_DeadzoneInner",
+                    "type": "float",
+                    "value": 0.1000000014,
+                    "default_value": 0.349999994,
+                    "min_value": 0.0,
+                    "max_value": 0.4900000095,
+                    "step_value": 0.0099999997
                 }
             ]
         },
@@ -964,7 +1018,7 @@
                     "name": "radio",
                     "type": "name",
                     "value": "IK_Z",
-                    "default_value": "IK_Z"
+                    "default_value": "None"
                 },
                 {
                     "name": "openNotifiation",
@@ -1243,7 +1297,7 @@
                     "value": 0,
                     "default_value": 0,
                     "min_value": 0,
-                    "max_value": 1000000,
+                    "max_value": 10000000,
                     "step_value": 1
                 },
                 {
@@ -2131,6 +2185,24 @@
             "group_name": "/key_bindings/SettingsUI",
             "options": [
                 {
+                    "name": "quickhackInfo",
+                    "type": "name",
+                    "value": "IK_Q",
+                    "default_value": "IK_Z"
+                },
+                {
+                    "name": "selectChoiceUI",
+                    "type": "name",
+                    "value": "IK_F",
+                    "default_value": "IK_F"
+                },
+                {
+                    "name": "secondaryChoiceUI",
+                    "type": "name",
+                    "value": "IK_R",
+                    "default_value": "IK_R"
+                },
+                {
                     "name": "prevItem",
                     "type": "name",
                     "value": "IK_1",
@@ -2143,22 +2215,16 @@
                     "default_value": "IK_3"
                 },
                 {
-                    "name": "quickhackInfo",
+                    "name": "prevItemSecondary",
                     "type": "name",
-                    "value": "IK_Q",
-                    "default_value": "IK_Z"
+                    "value": "IK_W",
+                    "default_value": "IK_W"
                 },
                 {
-                    "name": "selectLeftSecondary",
+                    "name": "nextItemSecondary",
                     "type": "name",
-                    "value": "IK_Left",
-                    "default_value": "IK_Left"
-                },
-                {
-                    "name": "selectRightSecondary",
-                    "type": "name",
-                    "value": "IK_Right",
-                    "default_value": "IK_Right"
+                    "value": "IK_S",
+                    "default_value": "IK_S"
                 },
                 {
                     "name": "previousOption",
@@ -2173,18 +2239,6 @@
                     "default_value": "IK_D"
                 },
                 {
-                    "name": "selectUpSecondary",
-                    "type": "name",
-                    "value": "IK_Up",
-                    "default_value": "IK_Up"
-                },
-                {
-                    "name": "selectDownSecondary",
-                    "type": "name",
-                    "value": "IK_Down",
-                    "default_value": "IK_Down"
-                },
-                {
                     "name": "selectUp",
                     "type": "name",
                     "value": "IK_R",
@@ -2197,16 +2251,28 @@
                     "default_value": "IK_E"
                 },
                 {
-                    "name": "selectChoiceUI",
+                    "name": "selectUpSecondary",
                     "type": "name",
-                    "value": "IK_F",
-                    "default_value": "IK_F"
+                    "value": "IK_Up",
+                    "default_value": "IK_Up"
                 },
                 {
-                    "name": "secondaryChoiceUI",
+                    "name": "selectDownSecondary",
                     "type": "name",
-                    "value": "IK_R",
-                    "default_value": "IK_R"
+                    "value": "IK_Down",
+                    "default_value": "IK_Down"
+                },
+                {
+                    "name": "selectLeftSecondary",
+                    "type": "name",
+                    "value": "IK_Left",
+                    "default_value": "IK_Left"
+                },
+                {
+                    "name": "selectRightSecondary",
+                    "type": "name",
+                    "value": "IK_Right",
+                    "default_value": "IK_Right"
                 }
             ]
         },
