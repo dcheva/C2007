@@ -1,0 +1,169 @@
+# --------------------------------------------------------------------------------------------- STATS ------------------------------------------------------------------------------------------------------------
+
+# misc stats for Mjolnir
+StatModifierGroups.MjolnirMiscStats:
+  $type: gamedataStatModifierGroup_Record
+  statModifiers:
+  - BaseStats.EquipDurationModifier
+  - BaseStats.UnequipDurationModifier
+  - Stats.MjolnirZoomLevel
+  - Stats.MjolnirFirstEquipExtraDuration
+  - Stats.MjolnirHasMeleeTargeting
+  - Stats.MjolnirEffectiveRange
+
+Stats.MjolnirZoomLevel:
+  $type: gamedataConstantStatModifier_Record
+  value: 0.25 # changed from 0
+  modifierType: Additive
+  statType: BaseStats.ZoomLevel
+
+Stats.MjolnirFirstEquipExtraDuration:
+  $type: gamedataConstantStatModifier_Record
+  value: 0.5
+  modifierType: Additive
+  statType: BaseStats.EquipDuration_First
+
+Stats.MjolnirHasMeleeTargeting:
+  $type: gamedataConstantStatModifier_Record
+  value: 1
+  modifierType: Additive
+  statType: BaseStats.HasMeleeTargeting
+
+Stats.MjolnirEffectiveRange:
+  $type: gamedataConstantStatModifier_Record
+  value: 20 # Increased from 15
+  modifierType: Additive
+  statType: BaseStats.EffectiveRange
+
+# handling stats for Mjolnir
+StatModifierGroups.MjolnirHandlingStats:
+  $type: gamedataStatModifierGroup_Record
+  statModifiers:
+  - Stats.MjolnirRange
+  - Stats.MjolnirAttacksNumber
+  - Stats.MjolnirDismembermentFactor
+  - Stats.MjolnirMeleeAttackComboDuration
+  - Stats.MjolnirMeleeAttackDuration
+  - Stats.MjolnirKnockdownImpulse
+  - Stats.MjolnirBaseKnockdownImpulse
+  - Stats.MjolnirEvadeImpulse
+  - Stats.MjolnirPhysicalImpulse
+  - Stats.MjolnirStaminaCostToBlock
+  - Stats.MjolnirBaseMeleeAttackStaminaCost
+
+Stats.MjolnirRange:
+  $type: gamedataConstantStatModifier_Record
+  value: 2.5 # changed from 2
+  modifierType: Additive
+  statType: BaseStats.Range
+
+Stats.MjolnirAttacksNumber:
+  $type: gamedataConstantStatModifier_Record
+  value: 3
+  modifierType: Additive
+  statType: BaseStats.AttacksNumber
+
+Stats.MjolnirDismembermentFactor:
+  $type: gamedataConstantStatModifier_Record
+  value: 1
+  modifierType: Multiplier
+  statType: BaseStats.HitDismembermentFactor
+
+Stats.MjolnirMeleeAttackComboDuration:
+  $type: gamedataConstantStatModifier_Record
+  value: 1 # changed from 0.775
+  modifierType: Additive
+  statType: BaseStats.MeleeAttackComboDuration
+
+Stats.MjolnirMeleeAttackDuration:
+  $type: gamedataConstantStatModifier_Record
+  value: 0.4
+  modifierType: Additive
+  statType: BaseStats.MeleeAttackDuration
+
+Stats.MjolnirKnockdownImpulse:
+  $type: gamedataConstantStatModifier_Record
+  value: 25
+  modifierType: Additive
+  statType: BaseStats.KnockdownImpulse
+
+Stats.MjolnirBaseKnockdownImpulse:
+  $type: gamedataConstantStatModifier_Record
+  value: 25
+  modifierType: Additive
+  statType: BaseStats.BaseKnockdownImpulse
+
+Stats.MjolnirEvadeImpulse:
+  $type: gamedataConstantStatModifier_Record
+  value: 25
+  statType: BaseStats.EvadeImpulse
+
+Stats.MjolnirPhysicalImpulse:
+  $type: gamedataConstantStatModifier_Record
+  value: 10
+  modifierType: Additive
+  statType: BaseStats.PhysicalImpulse
+
+Stats.MjolnirStaminaCostToBlock:
+  $type: gamedataConstantStatModifier_Record
+  value: 1.2
+  modifierType: Multiplier
+  statType: BaseStats.StaminaCostToBlock
+
+Stats.MjolnirBaseMeleeAttackStaminaCost:
+  $type: gamedataConstantStatModifier_Record
+  value: 18 # changed from 12
+  modifierType: Additive
+  statType: BaseStats.BaseMeleeAttackStaminaCost
+
+# RPG stats for Mjolnir
+StatModifierGroups.MjolnirRpgStats:
+  $type: gamedataStatModifierGroup_Record
+  statModifiers:
+  - Stats.MjolnirWeight
+  - Stats.MjolnirBlockFactor
+  - Stats.MjolnirHeadshotMulti
+  - Stats.MjolnirThrowRecovery
+  - Stats.MjolnirArmorPenetration
+
+Stats.MjolnirWeight:
+  $type: gamedataConstantStatModifier_Record
+  value: 100 # changed from 3.2
+  modifierType: Additive
+  statType: BaseStats.Weight
+
+Stats.MjolnirBlockFactor:
+  $type: gamedataConstantStatModifier_Record
+  value: 2.7
+  modifierType: Additive
+  statType: BaseStats.BlockFactor
+
+Stats.MjolnirHeadshotMulti:
+  $type: gamedataConstantStatModifier_Record
+  value: 1.25
+  modifierType: Additive
+  statType: BaseStats.HeadshotDamageMultiplier
+
+Stats.MjolnirThrowRecovery:
+  $type: gamedataConstantStatModifier_Record
+  value: 5 # changed from 3
+  modifierType: Additive
+  statType: BaseStats.ThrowRecovery
+
+Stats.MjolnirArmorPenetration:
+  $type: gamedataConstantStatModifier_Record
+  value: 0.2 # changed from 0.25
+  modifierType: Additive
+  statType: BaseStats.CanWeaponIgnoreArmor
+
+# Damage stats for Mjolnir
+StatModifierGroups.MjolnirDamageStats:
+  $type: gamedataStatModifierGroup_Record
+  statModifiers:
+  - Stats.MjolnirDPS
+
+Stats.MjolnirDPS:
+  $type: gamedataConstantStatModifier_Record
+  value: 50 # changed from 76
+  modifierType: Additive
+  statType: BaseStats.DPS

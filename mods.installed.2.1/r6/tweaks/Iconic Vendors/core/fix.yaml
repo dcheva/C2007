@@ -1,0 +1,199 @@
+Items.DummyW:
+  $type: Clothing
+Items.DummyW: &RemoveQuest
+  tags:
+  - !remove Quest
+Items.DummyW: &RemoveOnlyOnceInStore
+  tags:
+  - !remove OnlyOnceInStore
+Items.DummyW: &AppendIconic
+  statModifiers:
+  - !append Quality.IconicItem
+Items.DummyW: &SetLegendary
+  quality: Quality.Legendary
+
+### Gun shop ###
+Items.Preset_Silverhand_3516:
+  quality: Quality.Random
+  tags:
+    - !remove Quest
+    - !remove BaseWeapon
+  scaleToPlayer: true  
+
+Items.Preset_Overture_Cassidy: *RemoveQuest
+Items.Preset_Overture_River: *RemoveQuest
+
+# Ammo
+Vendors.AmmoQuantity:
+  $type: ConstantStatModifier
+  statType: BaseStats.Quantity
+  modifierType: Additive
+  value: 999
+
+### Junk shop ###
+
+Items.PerkPointSkillbook: *RemoveOnlyOnceInStore
+Items.AirdropPermaReward: *RemoveOnlyOnceInStore
+Items.CWCapacityPermaReward_Legendary: *RemoveOnlyOnceInStore
+Items.Espionage_Skillbook: *RemoveOnlyOnceInStore
+Items.Espionage_Skillbook: *AppendIconic
+
+Items.AttributePointSkillbook: *RemoveOnlyOnceInStore
+Items.AttributePointSkillbook: *AppendIconic
+Items.AttributePointSkillbook: *SetLegendary
+
+### Ripperdoc ###
+Items.AdvancedMaxTacMantisBladesEpic: *AppendIconic
+Items.AdvancedMaxTacMantisBladesEpicPlus: *AppendIconic
+Items.AdvancedMaxTacMantisBladesLegendary: *AppendIconic
+Items.AdvancedMaxTacMantisBladesLegendaryPlus: *AppendIconic
+Items.AdvancedMaxTacMantisBladesLegendaryPlusPlus: *AppendIconic
+
+### Foodshops ###
+Vendors.DLCPermanentQuantity:
+  $type: ConstantStatModifier
+  statType: BaseStats.Quantity
+  modifierType: Additive
+  value: 1
+
+Vendors.DLCFoodQuantity:
+  $type: RandomStatModifier
+  statType: BaseStats.Quantity
+  modifierType: Additive
+  min: 2
+  max: 8
+
+### QuickHacks ###
+Items.WhistleLvl4PlusPlusProgram: &IconicQuickHack
+  statModifiers:
+  - !append Quality.IconicItem
+  buyPrice:
+  - !append Price.IconicQuickHacks
+Items.ContagionLvl4PlusPlusProgram: *IconicQuickHack
+Items.LocomotionMalfunctionLvl4PlusPlusProgram: *IconicQuickHack
+Items.MadnessLvl4PlusPlusProgram: *IconicQuickHack
+Items.DisableCyberwareLvl4PlusPlusProgram: *IconicQuickHack
+Items.GrenadeExplodeLvl4PlusPlusProgram: *IconicQuickHack
+Items.MemoryWipeLvl4PlusPlusProgram: *IconicQuickHack
+Items.OverheatLvl4PlusPlusProgram: *IconicQuickHack
+Items.PingLvl4PlusPlusProgram: *IconicQuickHack
+Items.BlindLvl4PlusPlusProgram: *IconicQuickHack
+Items.CommsCallInLvl4PlusPlusProgram: *IconicQuickHack
+Items.EMPOverloadLvl4PlusPlusProgram: *IconicQuickHack
+Items.CommsNoiseLvl4PlusPlusProgram: *IconicQuickHack
+Items.BrainMeltLvl4PlusPlusProgram: *IconicQuickHack
+Items.WeaponMalfunctionLvl4PlusPlusProgram: *IconicQuickHack
+Items.SuicideLvl4PlusPlusProgram: *IconicQuickHack
+Items.SystemCollapseLvl4PlusPlusProgram: *IconicQuickHack
+
+### Clothes ###
+Items.Twitch_Drop_Pants: &IconicClothes
+  statModifiers:
+  - !append Quality.IconicItem
+  buyPrice:
+  - !append Price.IconicClothes 
+Items.Twitch_Drop_Vest: *IconicClothes
+Items.Twitch_Drop_Boots: *IconicClothes
+Items.Twitch_Drop_Specs: *IconicClothes
+Items.Red_Play_TShirt: *IconicClothes
+Items.Red_Play_Jacket: *IconicClothes
+Items.Red_Play_Vest: *IconicClothes
+Items.Q005_Johnny_Glasses: *IconicClothes
+Items.Q005_Johnny_Pants: *IconicClothes
+Items.Q005_Johnny_Shoes: *IconicClothes
+Items.Q005_Johnny_Shirt: *IconicClothes
+Items.SQ031_Samurai_Jacket: *IconicClothes
+Items.MQ049_martinez_jacket: *IconicClothes
+Items.Q114_Aldecaldo_Jacket: *IconicClothes
+Items.Q303_mask_h1: *IconicClothes
+Items.Techie_01_Set_Cap: *IconicClothes
+Items.Techie_01_Set_Tech: *IconicClothes
+Items.Techie_01_Set_Vest: *IconicClothes
+Items.Techie_01_Set_TShirt: *IconicClothes
+Items.Techie_01_Set_Pants: *IconicClothes
+Items.Techie_01_Set_Shoes: *IconicClothes
+Items.Solo_01_Set_Visor: *IconicClothes
+Items.Solo_01_Set_Jacket: *IconicClothes
+Items.Solo_01_Set_TShirt: *IconicClothes
+Items.Solo_01_Set_Pants: *IconicClothes
+Items.Solo_01_Set_Boots: *IconicClothes
+Items.Rockerboy_01_Set_Glasses: *IconicClothes
+Items.Rockerboy_01_Set_Jacket: *IconicClothes
+Items.Rockerboy_01_Set_TShirt: *IconicClothes
+Items.Rockerboy_01_Set_Pants: *IconicClothes
+Items.Rockerboy_01_Set_Boots: *IconicClothes
+Items.Cop_01_Set_Glasses: *IconicClothes
+Items.Cop_01_Set_Jacket: *IconicClothes
+Items.Cop_01_Set_Pants: *IconicClothes
+Items.Cop_01_Set_Boots: *IconicClothes
+Items.Nomad_01_Set_Mask: *IconicClothes
+Items.Nomad_01_Set_Jacket: *IconicClothes
+Items.Nomad_01_Set_TShirt: *IconicClothes
+Items.Nomad_01_Set_Pants: *IconicClothes
+Items.Nomad_01_Set_Boots: *IconicClothes
+Items.Netrunner_01_Set_Visor: *IconicClothes
+Items.Netrunner_01_Set_Jumpsuit: *IconicClothes
+Items.Netrunner_01_Set_Pants: *IconicClothes
+Items.Netrunner_01_Set_Shoes: *IconicClothes
+Items.Media_01_Set_Cap: *IconicClothes
+Items.Media_01_Set_Tech: *IconicClothes
+Items.Media_01_Set_Vest: *IconicClothes
+Items.Media_01_Set_Shirt: *IconicClothes
+Items.Media_01_Set_Pants: *IconicClothes
+Items.Media_01_Set_Shoes: *IconicClothes
+Items.Fixer_01_Set_Glasses: *IconicClothes
+Items.Fixer_01_Set_Coat: *IconicClothes
+Items.Fixer_01_Set_TShirt: *IconicClothes
+Items.Fixer_01_Set_Pants: *IconicClothes
+Items.Corporate_01_Set_Glasses: *IconicClothes
+Items.Corporate_01_Set_FormalJacket: *IconicClothes
+Items.Corporate_01_Set_FormalShirt: *IconicClothes
+Items.Corporate_01_Set_Pants: *IconicClothes
+Items.Corporate_01_Set_FormalShoes: *IconicClothes
+Items.SQ030_MaxTac_Helmet: *IconicClothes
+Items.SQ030_MaxTac_Chest: *IconicClothes
+Items.SQ030_MaxTac_Pants: *IconicClothes
+Items.Q005_Yorinobu_FormalShirt: *IconicClothes
+Items.Q005_Yorinobu_FormalPants: *IconicClothes
+Items.Q005_Steel_Dragons_Coat: *IconicClothes
+
+# Remove quest
+Items.Q005_Johnny_Glasses: &DelQuestTags
+  tags:
+  - !remove Quest
+  - !remove UnequipBlocked
+Items.Q005_Johnny_Pants: *DelQuestTags
+Items.Q005_Johnny_Shoes: *DelQuestTags
+Items.Q005_Johnny_Shirt: *DelQuestTags
+Items.SQ031_Samurai_Jacket: *DelQuestTags
+Items.Q303_mask_h1: *DelQuestTags
+Items.MQ304_assassin_outfit: *DelQuestTags
+Items.MQ304_assassin_outfit_ow: *DelQuestTags
+Items.Q307_hospital_outfit: *DelQuestTags
+Items.Q303_diving_suit: *DelQuestTags
+Items.Q304_netrunner_outfit: *DelQuestTags
+Items.Q303_party_outfit: *DelQuestTags
+Items.Q307_ending_outfit: *DelQuestTags
+Items.SQ023_Joshua_Prisonwear: *DelQuestTags
+Items.SQ030_Diving_Suit: *DelQuestTags
+Items.SQ030_Diving_Suit_NoShoes: *DelQuestTags
+Items.Q306_corpbud_outfit: *DelQuestTags
+Items.Q005_Militech_Suit: *DelQuestTags
+Items.Q005_Militech_Suit_Dirty: *DelQuestTags
+Items.Q005_Militech_Suit_Filthy: *DelQuestTags
+
+# Set Legendary
+Items.Q114_Aldecaldo_Jacket: *SetLegendary
+Items.SQ030_MaxTac_Helmet: *SetLegendary
+Items.SQ030_MaxTac_Chest: *SetLegendary
+Items.SQ030_MaxTac_Pants: *SetLegendary  
+Items.Trauma_Team_Outfit: *SetLegendary
+Items.Q005_Yorinobu_FormalShirt: *SetLegendary
+Items.Q005_Yorinobu_FormalPants: *SetLegendary
+Items.Q005_Steel_Dragons_Coat: *SetLegendary
+
+# CW loot > 60
+LootPrereqs.LegendaryCWLevelAvailabilityAtVendor_inline1:
+  comparisonType: LessOrEqual
+  statType: Level
+  valueToCheck: 200

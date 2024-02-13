@@ -1,0 +1,84 @@
+Vendors.bls_ina_se1_medicstore_01: &MedicalStore
+  itemStock:
+  # Permanent Booster
+  - !append
+    item: Items.PermanentHealthFood
+    quantity: ["Vendors.DLCPermanentQuantity"]
+  - !append
+    item: Items.PermanentStaminaRegenFood
+    quantity: ["Vendors.DLCPermanentQuantity"]  
+  - !append
+    item: Items.PermanentMemoryRegenFood
+    quantity: ["Vendors.DLCPermanentQuantity"]    
+
+  # Booster
+  - !append
+    item: Items.Blackmarket_CarryCapacityBooster
+    quantity: ["Vendors.DLCFoodQuantity"]     
+  - !append
+    item: Items.Blackmarket_StaminaBooster
+    quantity: ["Vendors.DLCFoodQuantity"]     
+  - !append
+    item: Items.Blackmarket_HealthBooster
+    quantity: ["Vendors.DLCFoodQuantity"]     
+  - !append
+    item: Items.BlackLaceV0
+    quantity: ["Vendors.DLCFoodQuantity"]     
+  - !append
+    item: Items.BlackLaceV1
+    quantity: ["Vendors.DLCFoodQuantity"]     
+  - !append
+    item: Items.Blackmarket_MemoryBooster
+    quantity: ["Vendors.DLCFoodQuantity"]     
+
+  # MAXDOC Plus
+  - !append
+    item: Items.FirstAidWhiffVCommonPlus
+    generationPrereqs: [LootPrereqs.PlayerLevel_Tier_1_Exclusion_Prereq]
+  - !append
+    item: Items.FirstAidWhiffVUncommonPlus
+    generationPrereqs: [LootPrereqs.PlayerLevel_Tier_1_to_2_Exclusion_Prereq]
+  - !append
+    item: Items.FirstAidWhiffVRarePlus
+    generationPrereqs: [LootPrereqs.PlayerLevel_Tier_2_to_3_Exclusion_Prereq]
+  - !append
+    item: Items.FirstAidWhiffVEpicPlus
+    generationPrereqs: [LootPrereqs.PlayerLevel_Tier_3_to_4_Exclusion_Prereq]
+  - !append
+    item: Items.FirstAidWhiffVLegendaryPlus
+    generationPrereqs: [LootPrereqs.PlayerLevel_Tier_4_to_5_Exclusion_Prereq]
+
+  # BOUNCE BACK Plus
+  - !append
+    item: Items.BonesMcCoy70VCommonPlus
+    generationPrereqs: [LootPrereqs.PlayerLevel_Tier_1_Exclusion_Prereq]
+  - !append
+    item: Items.BonesMcCoy70VUncommonPlus
+    generationPrereqs: [LootPrereqs.PlayerLevel_Tier_1_to_2_Exclusion_Prereq]
+  - !append
+    item: Items.BonesMcCoy70VRarePlus
+    generationPrereqs: [LootPrereqs.PlayerLevel_Tier_2_to_3_Exclusion_Prereq]
+  - !append
+    item: Items.BonesMcCoy70VEpicPlus
+    generationPrereqs: [LootPrereqs.PlayerLevel_Tier_3_to_4_Exclusion_Prereq]
+  - !append
+    item: Items.BonesMcCoy70VLegendaryPlus
+    generationPrereqs: [LootPrereqs.PlayerLevel_Tier_4_to_5_Exclusion_Prereq]
+
+#Vendors
+Vendors.wat_kab_medicstore_01: *MedicalStore
+Vendors.wat_nid_medicstore_01: *MedicalStore
+Vendors.wat_nid_medicstore_02: *MedicalStore
+Vendors.wat_lch_medicstore_01: *MedicalStore
+Vendors.wbr_jpn_medicstore_01: *MedicalStore
+Vendors.wbr_jpn_medicstore_02: *MedicalStore
+Vendors.wbr_jpn_medicstore_03: *MedicalStore
+Vendors.wbr_nok_medic_01: *MedicalStore
+Vendors.cct_dtn_medic_01: *MedicalStore
+Vendors.wbr_nok_medic_01: *MedicalStore
+Vendors.cct_cpz_medic_01: *MedicalStore
+Vendors.hey_spr_medicstore_01: *MedicalStore
+Vendors.std_arr_medicstore_01: *MedicalStore
+Vendors.std_rcr_medicstore_01: *MedicalStore
+Vendors.pac_cvi_medicstore_01: *MedicalStore
+

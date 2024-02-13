@@ -1,0 +1,11 @@
+# vendor who sells old bootlegs
+Vendors.wbr_jpn_clothingshop_02:
+  itemStock:
+  - !append-once ItemStock.Gleipnir
+
+ItemStock.Gleipnir:      
+  $type: gamedataVendorItem_Record
+  item: Weapons.Gleipnir
+  quantity:
+  - Vendors.Always_Present
+  generationPrereqs: []

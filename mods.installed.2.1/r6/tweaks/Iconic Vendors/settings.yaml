@@ -1,0 +1,149 @@
+################
+### Gun Shop ###
+################
+
+#!! Default Multiplier: 1.0
+# Power Weapons Multiplier
+Price.PowerWeapon.value: 1.0
+
+#!! Default Multiplier: 1.1
+# Smart Weapons Multiplier
+Price.SmartWeapon.value: 1.1
+
+#!! Default Multiplier: 1.1
+# Tech Weapons Multiplier
+Price.TechWeapon.value: 1.1
+
+#!! Default Multiplier: 0.9
+# Pistols Multiplier
+Price.HandgunMultiplier.value: 0.9
+
+#!! Default Multiplier: 1.0
+# Revolvers Multiplier
+Price.RevolverMultiplier.value: 1.0
+
+#!! Default Multiplier: 1.1
+# Shotguns Multiplier
+Price.ShotgunMultiplier.value: 1.1
+
+#!! Default Multiplier: 0.9
+# Submachine Guns Multiplier
+Price.SMGMultiplier.value: 0.9
+
+#!! Default Multiplier: 1.0
+# Assault Rifles Multiplier
+Price.AssaultRifleMultiplier.value: 1.0
+
+#!! Default Multiplier: 1.1
+# Light Machine Guns Multiplier
+Price.LMGMultiplier.value: 1.1
+
+#!! Default Multiplier: 1.1
+# Sniper Rifles Multiplier
+Price.PrecisionSniperRifleMultiplier.value: 1.1
+
+#!! Default Multiplier: 1.0
+# Melee Weapons Multiplier
+Price.MeleeWeapon.value: 1.0
+
+# Iconic Weapons
+#!! Default Multiplier: 3.923
+Price.Dex.value: 1.1
+
+##################
+### Cyberwares ###
+##################
+#!! Default Multiplier: 1.0
+
+# Meleeware
+Price.Meleeware.value: 1.0
+# BloodVessels
+Price.BloodVessels.value: 1.0
+# IronLungs
+Price.IronLungs.value: 1.0
+# BioConductors
+Price.BioConductors.value: 1.0
+# SecondHeart
+Price.SecondHeart.value: 1.0
+# BloodPump
+Price.BloodPump.value: 1.0
+# HealthMonitor
+Price.HealthMonitor.value: 1.0
+# MicroGenerator
+Price.MicroGenerator.value: 1.0
+# StaminaRegenBooster
+Price.StaminaRegenBooster.value: 1.0
+# DischargeConnector
+Price.DischargeConnector.value: 1.0
+# TyrosineInjector
+Price.TyrosineInjector.value: 1.0
+# LimbicSystemEnhancement
+Price.LimbicSystemEnhancement.value: 1.0
+# ImprovedPerception
+Price.ImprovedPerception.value: 1.0
+# Meleeware
+Price.Meleeware.value: 1.0
+# BrainCapacityBooster
+Price.BrainCapacityBooster.value: 1.0
+# FastAccessMemory
+Price.FastAccessMemory.value: 1.0
+# AntiVirus
+Price.AntiVirus.value: 1.0
+# MemoryBoost
+Price.MemoryBoost.value: 1.0
+# MemoryReplenishment
+Price.MemoryReplenishment.value: 1.0
+# RoboticCore
+Price.RoboticCore.value: 1.0
+# Meleeware
+Price.Meleeware.value: 1.0
+# SmartLink
+Price.SmartLink.value: 1.0
+# PowerGrip
+Price.PowerGrip.value: 1.0
+# ElectromagneticPlating
+Price.ElectromagneticPlating.value: 1.0
+
+####################
+### Clothes Shop ###
+####################
+
+# Iconic Clothes
+#!! Default Multiplier: 1.0
+Price.IconicClothes.value: 5.0
+
+##################
+### QuickHacks ###
+##################
+# Iconic QuickHacks
+#!! Default Multiplier: 1.0
+Price.IconicQuickHacks.value: 2.0
+
+#################
+### Junk Shop ###
+#################
+
+### Mods ###
+
+# Chimera Mods
+#!! Default: 5500
+Price.ChimeraMods.value: 25000
+
+### Shards ###
+#!! Default: 3400
+# Carry Capacity Shard
+Price.CarryCapacityShard.value: 10000
+# Cyberware Capacity Shard
+Price.CWCapacityShard.value: 20000
+# Perk Shard
+Price.PerkShard.value: 30000
+# Attribute Shard
+Price.AttributeShard.value: 100000
+# Relic Shard
+Price.RelicShard.value: 50000
+
+### Junk ###
+
+# Untitled 18 – Brancesi, 2021
+#!! Default: 8000
+MQ003_painting.value: 8000

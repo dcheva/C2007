@@ -1,0 +1,87 @@
+Vendors.bls_ina_se5_melee_01: &MeleeShop
+  itemStock:
+    #2H Clubs
+    - !append
+      item: Items.Preset_Baseball_Bat_Denny
+    - !append
+      item: Items.Preset_Baseball_Bat_Malina
+    - !append
+      item: Items.Preset_Baseball_Bat_Legendary
+
+    #1H Clubs
+    - !append
+      item: Items.Preset_Cane_Fingers
+
+    - !append
+      item: Items.Preset_Dildo_Stout
+
+    - !append
+      item: Items.Preset_Baton_Tinker_Bell
+    - !append
+      item: Items.Preset_Baton_Murphy
+
+    - !append
+      item: Items.Preset_Crowbar_Bunker
+
+    # Hammers
+    - !append
+      item: Items.Preset_Shovel_Caretaker
+
+    - !append
+      item: Items.w_melee_boss_hammer
+
+    # Katanas
+    - !append
+      item: Items.Preset_Katana_Wakako
+    - !append
+      item: Items.Preset_Katana_Cocktail
+    - !append
+      item: Items.Preset_Katana_Takemura
+    - !append
+      item: Items.Preset_Katana_Saburo
+    - !append
+      item: Items.Preset_Katana_Surgeon
+    - !append
+      item: Items.Preset_Katana_Hiromi
+    - !append
+      item: Items.Preset_Katana_E3
+    - !append
+      item: Items.Preset_Katana_GoG
+
+    # Knifes
+    - !append
+      item: Items.Preset_Butchers_Knife_Iconic
+    - !append
+      item: Items.Preset_Neurotoxin_Knife_Iconic
+    - !append
+      item: Items.Preset_Punk_Knife_Iconic
+    - !append
+      item: Items.Preset_Knife_Stinger
+    - !append
+      item: Items.Preset_Knife_Kurtz_1
+    - !append
+      item: Items.Preset_Tanto_Saburo
+
+    # Axes
+    - !append
+      item: Items.Preset_VB_Axe
+
+    # Chainswords
+    - !append
+      item: Items.Preset_Chainsword_Legendary
+
+    # Machetes
+    - !append
+      item: Items.Preset_Machete_Borg_AirDrop
+
+    # Swords
+    - !append
+      item: Items.Preset_Sword_Witcher
+
+#Vendors
+Vendors.wat_lch_melee_01: *MeleeShop
+Vendors.wat_lch_melee_02: *MeleeShop
+Vendors.wbr_jpn_melee_01: *MeleeShop
+Vendors.pac_cvi_melee_01: *MeleeShop
+Vendors.pac_wwd_melee_01: *MeleeShop
+Vendors.std_arr_melee_01: *MeleeShop

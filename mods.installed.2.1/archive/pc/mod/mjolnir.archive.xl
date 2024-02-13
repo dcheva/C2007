@@ -1,0 +1,26 @@
+localization:
+  onscreens:
+    ar-ar: mjolnir\localization\ar-ar.json
+    cz-cz: mjolnir\localization\cz-cz.json
+    de-de: mjolnir\localization\de-de.json
+    en-us: mjolnir\localization\en-us.json
+    es-es: mjolnir\localization\es-es.json
+    es-mx: mjolnir\localization\es-mx.json
+    fr-fr: mjolnir\localization\fr-fr.json
+    hu-hu: mjolnir\localization\hu-hu.json
+    it-it: mjolnir\localization\it-it.json
+    jp-jp: mjolnir\localization\jp-jp.json
+    kr-kr: mjolnir\localization\kr-kr.json
+    pl-pl: mjolnir\localization\pl-pl.json
+    pt-br: mjolnir\localization\pt-br.json
+    ru-ru: mjolnir\localization\ru-ru.json
+    th-th: mjolnir\localization\th-th.json
+    tr-tr: mjolnir\localization\tr-tr.json
+    ua-ua: mjolnir\localization\ua-ua.json
+    zh-cn: mjolnir\localization\zh-cn.json
+    zh-tw: mjolnir\localization\zh-tw.json
+factories:
+    - mjolnir\mjolnir_factory.csv
+streaming:
+  blocks:
+    - mjolnir\spawn\mjolnir.streamingblock

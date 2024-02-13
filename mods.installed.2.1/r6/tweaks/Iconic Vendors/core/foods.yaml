@@ -1,0 +1,77 @@
+Vendors.bls_ina_se1_foodshop_01: &FoodShops
+  itemStock:
+    # Foods
+    - !append
+      item: Items.HealthFood1
+      quantity: ["Vendors.DLCFoodQuantity"]
+    - !append
+      item: Items.HealthFood2
+      quantity: ["Vendors.DLCFoodQuantity"]
+    - !append
+      item: Items.HealthFood3
+      quantity: ["Vendors.DLCFoodQuantity"]
+    - !append
+      item: Items.CombatFood1
+      quantity: ["Vendors.DLCFoodQuantity"]
+    - !append
+      item: Items.CombatFood2
+      quantity: ["Vendors.DLCFoodQuantity"]
+    - !append
+      item: Items.CombatFood3
+      quantity: ["Vendors.DLCFoodQuantity"]
+    - !append
+      item: Items.StealthFood1
+      quantity: ["Vendors.DLCFoodQuantity"]
+    - !append
+      item: Items.CarFood1
+      quantity: ["Vendors.DLCFoodQuantity"]
+    - !append
+      item: Items.NetrunnerFood1
+      quantity: ["Vendors.DLCFoodQuantity"]
+    - !append
+      item: Items.NetrunnerFood2
+      quantity: ["Vendors.DLCFoodQuantity"]
+
+# Foodshops
+Vendors.bls_ina_se1_foodshop_01: *FoodShops
+Vendors.bls_ina_se1_foodshop_02: *FoodShops
+Vendors.bls_ina_se1_foodshop_03: *FoodShops
+Vendors.bls_ina_se5_foodshop_01: *FoodShops
+Vendors.wat_nid_foodshop_01: *FoodShops
+Vendors.wat_nid_foodshop_02: *FoodShops
+Vendors.wat_kab_foodshop_01: *FoodShops
+Vendors.wat_kab_foodshop_02: *FoodShops
+Vendors.wat_kab_foodshop_03: *FoodShops
+Vendors.wat_kab_foodshop_04: *FoodShops
+Vendors.wat_lch_foodshop_01: *FoodShops
+Vendors.wat_lch_foodshop_02: *FoodShops
+Vendors.wat_lch_foodshop_03: *FoodShops
+Vendors.wat_awf_foodstore_01: *FoodShops
+Vendors.wbr_nok_foodshop_02: *FoodShops
+Vendors.wbr_jpn_foodshop_01: *FoodShops
+Vendors.wbr_jpn_foodshop_02: *FoodShops
+Vendors.wbr_jpn_foodshop_03: *FoodShops
+Vendors.wbr_jpn_foodshop_04: *FoodShops
+Vendors.wbr_jpn_foodshop_05: *FoodShops
+Vendors.wbr_jpn_jig_bar_01: *FoodShops
+Vendors.wbr_hil_foodshop_01: *FoodShops
+Vendors.wbr_hil_foodshop_02: *FoodShops
+Vendors.cct_dtn_food_01: *FoodShops
+Vendors.cct_dtn_food_02: *FoodShops
+Vendors.cct_cpz_food_01: *FoodShops
+Vendors.cct_cpz_food_02: *FoodShops
+Vendors.hey_spr_foodshop_01: *FoodShops
+Vendors.hey_rey_foodshop_01: *FoodShops
+Vendors.hey_rey_foodshop_02: *FoodShops
+Vendors.hey_rey_foodshop_03: *FoodShops
+Vendors.hey_rey_foodshop_04: *FoodShops
+Vendors.hey_gle_foodshop_01: *FoodShops
+Vendors.hey_gle_foodshop_02: *FoodShops
+Vendors.std_arr_foodshop_01: *FoodShops
+Vendors.std_arr_foodshop_02: *FoodShops
+Vendors.std_arr_foodshop_03: *FoodShops
+Vendors.std_arr_foodshop_04: *FoodShops
+Vendors.std_rcr_foodshop_01: *FoodShops
+Vendors.aip_foodshop_01: *FoodShops
+Vendors.pac_cvi_foodshop_01: *FoodShops
+Vendors.q105_dollhouse_bar_barkeeper: *FoodShops

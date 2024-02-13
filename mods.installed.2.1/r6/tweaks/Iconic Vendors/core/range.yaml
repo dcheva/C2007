@@ -1,0 +1,265 @@
+Vendors.bls_ina_se1_gunsmith_01a: &Gunshop
+  itemStock:
+  # Pistols
+    #Power
+    - !append
+      item: Items.Preset_Unity_Agent
+    - !append
+      item: Items.Preset_Unity_Angelica
+
+    - !append
+      item: Items.Preset_Lexington_Wilson_Legendary
+    - !append
+      item: Items.Preset_Lexington_Shooting_Competition
+    - !append
+      item: Items.Preset_Lexington_Rook
+
+    - !append
+      item: Items.Preset_Liberty_Yorinobu
+    - !append
+      item: Items.Preset_Liberty_Dex
+    - !append
+      item: Items.Preset_Liberty_Rogue
+    - !append
+      item: Items.Preset_Liberty_Padre      
+
+    - !append
+      item: Items.Preset_Nue_Maiko
+    - !append
+      item: Items.Preset_Nue_Jackie
+    - !append
+      item: Items.Preset_Nue_Bree
+
+    - !append
+      item: Items.Preset_Silverhand_3516  
+    #Smart  
+    - !append
+      item: Items.Preset_Yukimura_Kiji
+    - !append
+      item: Items.Preset_Yukimura_Skippy
+
+    - !append
+      item: Items.Preset_Kappa_George
+    - !append
+      item: Items.Preset_Kappa_Legendary
+
+    - !append
+      item: Items.Preset_Chao_VooDoo
+    #Tech
+    - !append
+      item: Items.Preset_Kenshin_Frank
+    - !append
+      item: Items.Preset_Kenshin_Royce
+    - !append
+      item: Items.Preset_Kenshin_Spy
+
+    - !append
+      item: Items.Preset_Grit_Amazon
+
+    - !append
+      item: Items.Preset_Omaha_Suzie
+
+    - !append
+      item: Items.Preset_Ticon_Reed
+    - !append
+      item: Items.Preset_Ticon_Gwent
+
+  # Revolvers
+
+    #Power
+    - !append
+      item: Items.Preset_Nova_Doom_Doom
+    - !append
+      item: Items.Preset_Nova_Hitman
+
+    - !append
+      item: Items.Preset_Overture_Cassidy
+    - !append
+      item: Items.Preset_Overture_Kerry
+    - !append
+      item: Items.Preset_Overture_River
+    - !append
+      item: Items.Preset_Overture_Dodger
+    - !append
+      item: Items.Preset_Overture_Dante
+
+    - !append
+      item: Items.Preset_Metel_AirDrop
+    - !append
+      item: Items.Preset_Metel_Kurt
+    #Tech
+    - !append
+      item: Items.Preset_Burya_Comrade
+    - !append
+      item: Items.Preset_Burya_AirDrop
+
+    - !append
+      item: Items.Preset_Quasar_Baron
+
+  # Shotguns
+
+    #Power  
+    - !append
+      item: Items.Preset_Tactician_Headsman
+    - !append
+      item: Items.Preset_Tactician_Dino
+
+    - !append
+      item: Items.Preset_Carnage_Mox
+    - !append
+      item: Items.Preset_Carnage_Edgerunners
+
+    - !append
+      item: Items.Preset_Crusher_Amazon
+
+    - !append
+      item: Items.Preset_Testera_Nicolas
+
+    - !append
+      item: Items.Preset_Igla_Sovereign
+
+    - !append
+      item: Items.Preset_Pozhar_AirDrop
+    - !append
+      item: Items.Preset_Pozhar_Legendary      
+    #Smart
+    - !append
+      item: Items.Preset_Zhuo_Eight_Star
+    #Tech
+    - !append
+      item: Items.Preset_Satara_Brick
+
+  # Submachine Guns
+
+    #Power
+    - !append
+      item: Items.Preset_Saratoga_Maelstrom
+    - !append
+      item: Items.Preset_Saratoga_Raffen
+
+    - !append
+      item: Items.Preset_Guillotine_Collectible      
+
+    - !append
+      item: Items.Preset_Pulsar_Buzzsaw
+
+    - !append
+      item: Items.Preset_Borg4a_HauntedGun
+    #Smart
+    - !append
+      item: Items.Preset_Shingen_Prototype
+    - !append
+      item: Items.Preset_Dian_Yinglong      
+
+    - !append
+      item: Items.Preset_Warden_Boris
+    - !append
+      item: Items.Preset_Warden_Amazon
+    #Tech
+    - !append
+      item: Items.Preset_Senkoh_Prototype
+
+  # Assault Rifles
+
+    #Power
+    - !append
+      item: Items.Preset_Masamune_Rogue
+
+    - !append
+      item: Items.Preset_Umbra_Bebe
+    - !append
+      item: Items.Preset_Umbra_Collectible
+
+    - !append
+      item: Items.Preset_Kyubi_Legendary
+    - !append
+      item: Items.Preset_Kyubi_Myers
+    - !append
+      item: Items.Preset_Kyubi_Amazon
+
+    - !append
+      item: Items.Preset_Ajax_Moron
+    - !append
+      item: Items.Preset_Ajax_Amazon      
+
+    - !append
+      item: Items.Preset_Copperhead_Genesis
+    #Smart
+    - !append
+      item: Items.Preset_Sidewinder_Divided
+
+    - !append
+      item: Items.Preset_Hercules_Prototype
+
+  # Machine Guns
+
+    - !append
+      item: Items.Preset_Defender_Kurt
+
+  # Precision Rifles
+
+    - !append
+      item: Items.Preset_Kolac_Tiny_Mike
+
+    - !append
+      item: Items.Preset_Achilles_Nash
+
+  # Sniper Rifles
+
+    #Power
+    - !append
+      item: Items.Preset_Grad_Buck
+    - !append
+      item: Items.Preset_Grad_Panam
+    - !append
+      item: Items.Preset_Grad_Scav
+    - !append
+      item: Items.Preset_Grad_AirDrop
+
+    - !append
+      item: Items.Preset_Osprey_Prototype      
+    #Smart
+    - !append
+      item: Items.Preset_Ashura_Twitch
+    #Tech
+    - !append
+      item: Items.Preset_Nekomata_Breakthrough
+    - !append
+      item: Items.Preset_Nekomata_Amazon
+
+    - !append
+      item: Items.Preset_Rasetsu_Prototype
+
+
+Vendors.wat_kab_gunsmith_01:
+  itemStock: []
+  itemStock: 
+    - !append
+      item: Ammo.HandgunAmmo
+      quantity: ["Vendors.AmmoQuantity"]
+    - !append
+      item: Ammo.ShotgunAmmo
+      quantity: ["Vendors.AmmoQuantity"]
+    - !append
+      item: Ammo.RifleAmmo
+      quantity: ["Vendors.AmmoQuantity"]
+    - !append
+      item: Ammo.SniperRifleAmmo
+      quantity: ["Vendors.AmmoQuantity"]
+      
+#Vendors
+Vendors.wat_kab_gunsmith_01: *Gunshop
+
+Vendors.bls_ina_se1_gunsmith_02: *Gunshop
+Vendors.bls_ina_se5_gunsmith_01: *Gunshop
+Vendors.wat_lch_gunsmith_01: *Gunshop
+Vendors.wat_kab_gunsmith_02: *Gunshop
+Vendors.wbr_jpn_gunsmith_01: *Gunshop
+Vendors.cct_dtn_guns_01: *Gunshop
+Vendors.hey_spr_gunsmith_01: *Gunshop
+Vendors.hey_gle_gunsmith_01: *Gunshop
+Vendors.hey_rey_gunsmith_01: *Gunshop
+Vendors.std_arr_gunsmith_01: *Gunshop
+Vendors.std_rcr_gunsmith_01: *Gunshop
+Vendors.pac_wwd_gunsmith_01: *Gunshop
+Vendors.wat_nid_gunsmith_01: *Gunshop

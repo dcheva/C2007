@@ -1,0 +1,270 @@
+Vendors.bls_ina_se1_clothingshop_01: &ClothingShop
+  itemStock:
+    # Twitch
+    - !append
+      item: Items.Twitch_Drop_Pants
+    - !append
+      item: Items.Twitch_Drop_Vest
+    - !append
+      item: Items.Twitch_Drop_Boots
+    - !append
+      item: Items.Twitch_Drop_Specs
+
+    # Gwent
+    - !append
+      item: Items.Red_Play_TShirt
+    - !append
+      item: Items.Red_Play_Jacket
+    - !append
+      item: Items.Red_Play_Vest
+
+    # Johnny set
+    - !append
+      item: Items.Q005_Johnny_Glasses
+    - !append
+      item: Items.Q005_Johnny_Pants
+    - !append
+      item: Items.Q005_Johnny_Shoes
+    - !append
+      item: Items.Q005_Johnny_Shirt
+    - !append
+      item: Items.SQ031_Samurai_Jacket
+
+    # Lizzy Wizzy
+    - !append
+      item: Items.Q303_mask_h1
+
+    # David's Jacket
+    - !append
+      item: Items.MQ049_martinez_jacket
+
+    # Aldecaldos Rally Bolero Jacket
+    - !append
+      item: Items.Q114_Aldecaldo_Jacket    
+
+    # Techie set
+    - !append
+      item: Items.Techie_01_Set_Cap`
+    - !append
+      item: Items.Techie_01_Set_Tech
+    - !append
+      item: Items.Techie_01_Set_Vest
+    - !append
+      item: Items.Techie_01_Set_TShirt
+    - !append
+      item: Items.Techie_01_Set_Pants
+    - !append
+      item: Items.Techie_01_Set_Shoes
+
+    # Solo set
+    - !append
+      item: Items.Solo_01_Set_Visor
+    - !append
+      item: Items.Solo_01_Set_Jacket
+    - !append
+      item: Items.Solo_01_Set_TShirt
+    - !append
+      item: Items.Solo_01_Set_Pants
+    - !append
+      item: Items.Solo_01_Set_Boots
+
+    # Rockerboy set
+    - !append
+      item: Items.Rockerboy_01_Set_Glasses
+    - !append
+      item: Items.Rockerboy_01_Set_Jacket
+    - !append
+      item: Items.Rockerboy_01_Set_TShirt
+    - !append
+      item: Items.Rockerboy_01_Set_Pants
+    - !append
+      item: Items.Rockerboy_01_Set_Boots
+
+     # Cop set
+    - !append
+      item: Items.Cop_01_Set_Glasses
+    - !append
+      item: Items.Cop_01_Set_Jacket
+    - !append
+      item: Items.Cop_01_Set_Pants
+    - !append
+      item: Items.Cop_01_Set_Boots
+
+    # Nomad set
+    - !append
+      item: Items.Nomad_01_Set_Mask
+    - !append
+      item: Items.Nomad_01_Set_Jacket
+    - !append
+      item: Items.Nomad_01_Set_TShirt
+    - !append
+      item: Items.Nomad_01_Set_Pants
+    - !append
+      item: Items.Nomad_01_Set_Boots   
+
+    # Netrunner set
+    - !append
+      item: Items.Netrunner_01_Set_Visor
+    - !append
+      item: Items.Netrunner_01_Set_Jumpsuit
+    - !append
+      item: Items.Netrunner_01_Set_Pants
+    - !append
+      item: Items.Netrunner_01_Set_Shoes
+
+    # Media set
+    - !append
+      item: Items.Media_01_Set_Cap
+    - !append
+      item: Items.Media_01_Set_Tech
+    - !append
+      item: Items.Media_01_Set_Vest
+    - !append
+      item: Items.Media_01_Set_Shirt
+    - !append
+      item: Items.Media_01_Set_Pants
+    - !append
+      item: Items.Media_01_Set_Shoes
+
+    # Fixer set
+    - !append
+      item: Items.Fixer_01_Set_Glasses
+    - !append
+      item: Items.Fixer_01_Set_Coat
+    - !append
+      item: Items.Fixer_01_Set_TShirt
+    - !append
+      item: Items.Fixer_01_Set_Pants
+    - !append
+      item: Items.Fixer_01_Set_FormalShoes
+
+    # Corporate set
+    - !append
+      item: Items.Corporate_01_Set_Glasses
+    - !append
+      item: Items.Corporate_01_Set_FormalJacket
+    - !append
+      item: Items.Corporate_01_Set_FormalShirt
+    - !append
+      item: Items.Corporate_01_Set_Pants
+    - !append
+      item: Items.Corporate_01_Set_FormalShoes
+
+    # Corporate set
+    - !append
+      item: Items.SQ030_MaxTac_Helmet
+    - !append
+      item: Items.SQ030_MaxTac_Chest
+    - !append
+      item: Items.SQ030_MaxTac_Pants
+
+    # Yorinobu set
+    - !append
+      item: Items.Q005_Yorinobu_FormalShirt
+    - !append
+      item: Items.Q005_Yorinobu_FormalPants
+    - !append
+      item: Items.Q005_Steel_Dragons_Coat
+
+    # Rogue
+    - !append
+      item: Items.Q115_Custom_Predator_Armor
+    - !append
+      item: Items.Q115_Custom_Predator_Boots
+    - !append
+      item: Items.q115_thrusters
+      
+    # Lina Malina
+    - !append
+      item: Items.Q303_lina_tshirt
+
+
+    # Full body
+    - !append
+      item: Items.Jumpsuit_03_old_01
+    - !append
+      item: Items.Jumpsuit_03_old_02
+    - !append
+      item: Items.Jumpsuit_03_old_03
+    - !append
+      item: Items.MQ304_assassin_outfit
+    - !append
+      item: Items.MQ304_assassin_outfit_ow
+    - !append
+      item: Items.Q000_half_Corpo
+    - !append
+      item: Items.Q000_half_Nomad
+    - !append
+      item: Items.Q000_half_StreetKid
+    - !append
+      item: Items.Q005_Militech_Suit
+    - !append
+      item: Items.Q005_Militech_Suit_Dirty
+    - !append
+      item: Items.Q005_Militech_Suit_Filthy
+    - !append
+      item: Items.Q101_Recovery_Bandage_Outfit
+    - !append
+      item: Items.Q114_Cyberspace_Jumpsuit
+    - !append
+      item: Items.Q115_Afterlife_Netrunner
+    - !append
+      item: Items.Q203_Spacesuit_Outfit_NoHelmet
+    - !append
+      item: Items.Q203_Spacesuit_Outfit_WithHelmet
+    - !append
+      item: Items.Q301_nusa_agent
+    - !append
+      item: Items.Q303_diving_suit
+    - !append
+      item: Items.Q303_party_outfit
+    - !append
+      item: Items.Q304_netrunner_outfit
+    - !append
+      item: Items.Q305_hazmat
+    - !append
+      item: Items.Q306_corpbud_outfit
+    - !append
+      item: Items.Q307_ending_outfit
+    - !append
+      item: Items.Q307_hospital_outfit
+    - !append
+      item: Items.Roach_Race_Outfit
+    - !append
+      item: Items.SQ023_Joshua_Prisonwear
+    - !append
+      item: Items.SQ029_Police_Suit
+    - !append
+      item: Items.SQ030_Diving_Suit
+    - !append
+      item: Items.SQ030_Diving_Suit_NoShoes
+    - !append
+      item: Items.Trauma_Team_Outfit
+    - !append
+      item: Items.Q115_Afterlife_Netrunner
+
+    # Other
+    - !append
+      item: Items.Q301_Street_WA_InnerTorso
+    - !append
+      item: Items.Q301_Street_MA_Boots
+    - !append
+      item: Items.Q201_SpaceHospitalPants
+    - !append
+      item: Items.Q201_SpaceHospitalShirt
+
+
+#Vendors
+Vendors.wat_nid_clothingshop_01: *ClothingShop
+Vendors.wat_kab_clothingshop_01: *ClothingShop
+Vendors.wat_lch_clothingshop_01: *ClothingShop
+Vendors.wbr_jpn_clothingshop_01: *ClothingShop
+Vendors.wbr_jpn_clothingshop_02: *ClothingShop
+Vendors.wbr_hil_clothingshop_01: *ClothingShop
+Vendors.hey_spr_clothingshop_01: *ClothingShop
+Vendors.std_arr_clothingshop_01: *ClothingShop
+Vendors.std_rcr_clothingshop_01: *ClothingShop
+Vendors.pac_cvi_clothingshop_01: *ClothingShop
+Vendors.pac_wwd_clothingshop_01: *ClothingShop
+Vendors.cct_dtn_cloth_01: *ClothingShop
+Vendors.cct_cpz_cloth_02: *ClothingShop

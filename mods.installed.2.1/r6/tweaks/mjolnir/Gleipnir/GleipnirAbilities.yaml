@@ -1,0 +1,280 @@
+# --------------------------------------------------------------------------------------------- EFFECTORS -------------------------------------------------------------------------------------------------------
+
+# effector to return Hammer to player when they jump
+GleipnirEffectors.NorseBoomerang:
+  $type: gamedataApplyStatusEffectEffector_Record
+  applicationTarget: Player
+  count: 1
+  instigator: ''
+  inverted: False
+  removeWithEffector: True
+  statusEffect: GleipnirStatusEffects.RemoveThrowableCooldown
+  useCountWhenRemoving: False
+  effectorClassName: ApplyStatusEffectEffector
+  prereqRecord: GleipnirPrereqs.IsPlayerDodgingWithThrowableCooldownAndEnoughStamina
+  removeAfterActionCall: False
+  removeAfterPrereqCheck: False
+
+# effector to return Hammer to player when they jump
+GleipnirEffectors.NorseBoomerangStaminaReduction:
+  $type: ModifyStatPoolValueEffector
+  usePercent: False
+  prereqRecord: GleipnirPrereqs.IsPlayerDodgingWithThrowableCooldownAndEnoughStamina
+  statPoolUpdates: 
+  - $type: StatPoolUpdate
+    statPoolType: BaseStatPools.Stamina
+    statPoolValue: -15
+
+# effector to make enemies conductive
+GleipnirEffectors.InduceConduction:
+  $type: AddStatusEffectToAttackEffector
+  prereqRecord: Prereqs.IsNormalMeleeOnTargetHit
+  statusEffect: GleipnirStatusEffects.Conductive
+  applicationChance: 
+  - $type: gamedataConstantStatModifier_Record
+    value: 1
+    modifierType: Additive
+    statType: BaseStats.ApplicationChance
+
+# effector to explode conductive enemies
+GleipnirEffectors.ExploitConduction:
+  $type: gamedataTriggerAttackEffector_Record
+  effectorClassName: TriggerAttackOnTargetEffect
+  prereqRecord: Prereqs.IsStrongAttackOnConductiveTarget
+  attackRecord: GleipnirAttacks.ConductiveStrongAttack
+  applicationChance: 1
+  attackPositionSlotName: Chest
+  startOnUninitialize: False
+
+# Effector to heal player if they strong attack a conductive target
+GleipnirEffectors.ExploitConductionHealBuff:
+  $type: ModifyStatPoolValueEffector
+  prereqRecord: Prereqs.IsStrongAttackOnConductiveTarget
+  usePercent: True
+  statPoolUpdates: 
+  - $type: StatPoolUpdate
+    statPoolType: BaseStatPools.Health
+    statPoolValue: 30
+
+# Effector to heal player if they strong attack a conductive target
+GleipnirEffectors.ExploitConductionStaminaBuff:
+  $type: ModifyStatPoolValueEffector
+  prereqRecord: Prereqs.IsStrongAttackOnConductiveTarget
+  usePercent: True
+  statPoolUpdates: 
+  - $type: StatPoolUpdate
+    statPoolType: BaseStatPools.Stamina
+    statPoolValue: 50
+
+# effector for when player throws the weapon
+GleipnirEffectors.StormBreaker:
+  $type: gamedataTriggerAttackEffector_Record
+  effectorClassName: TriggerAttackOnTargetEffect
+  prereqRecord: GleipnirPrereqs.PlayerHasSomeStaminaAfterThrownAttackHits
+  attackRecord: GleipnirAttacks.LightningStrike
+  applicationChance: 1
+  attackPositionSlotName: Head
+  startOnUninitialize: False
+
+# effector to stun nearby enemies
+GleipnirEffectors.ThunderclapParalysis:
+  $type: gamedataEffector_Record
+  effectorClassName: TriggerAttackOnNearbyEnemiesEffector
+  prereqRecord: Prereqs.HasThrownAttackHitHead
+  playVFXOnHitTargets: electric_hit
+  attackRecord: GleipnirAttacks.ParalyzingElectrocution
+  targetHowManyEnemies: 5
+  targetMaxDistance: 12
+  targetMinDistance: 0.3
+
+# effector for when player uses quake
+GleipnirEffectors.Skyfall:
+  $type: gamedataTriggerAttackEffector_Record
+  effectorClassName: TriggerAttackOnTargetEffect
+  prereqRecord: Prereqs.IsGroundSlamAttack
+  attackRecord: GleipnirAttacks.BlindingLights
+  applicationChance: 1
+  attackPositionSlotName: Legs
+
+# effector for when player uses body slam
+GleipnirEffectors.OdinStruck:
+  $type: gamedataTriggerAttackEffector_Record
+  effectorClassName: TriggerAttackOnTargetEffect
+  prereqRecord: Prereqs.IsBodySlamAttack
+  attackRecord: GleipnirAttacks.Electrocute
+  applicationChance: 1
+  attackPositionSlotName: Chest
+
+# --------------------------------------------------------------------------------------------- PREREQS ---------------------------------------------------------------------------------------------------------
+
+# prereq to check if player is enough time has passed after the throw, player is dodging/dashing/airdashing, and has enough stamina
+GleipnirPrereqs.IsPlayerDodgingWithThrowableCooldownAndEnoughStamina:
+  $base: Prereqs.ANDPrereq
+  nestedPrereqs:
+  - Perks.IsPlayerDodging
+  - GleipnirPrereqs.IsThrowableCooldownActive
+  - GleipnirPrereqs.HasSomeStamina
+
+# prereq to check if enough time has passed before recall can be used
+GleipnirPrereqs.IsThrowableCooldownActive:
+  $type: gamedataStatPoolPrereq_Record
+  objectToCheck: Weapon
+  valueToCheck:
+  - $type: ConstantStatModifier
+    statType: BaseStats.ThrowRecovery
+    modifierType: Additive
+    value: 90
+  statPoolType: ThrowRecovery
+  comparisonType: Less
+
+# prereq to check if stamina is enough for weapon recall
+GleipnirPrereqs.HasSomeStamina:
+  $type: gamedataStatPoolPrereq_Record
+  valueToCheck:
+  - $type: ConstantStatModifier
+    statType: BaseStats.Stamina
+    modifierType: Additive
+    value: 15
+  statPoolType: Stamina
+  comparisonType: Greater
+
+# prereq to check if player has enough stamina to trigger lightning strike
+GleipnirPrereqs.PlayerHasSomeStaminaAfterThrownAttackHits:
+  $base: Prereqs.ANDPrereq
+  nestedPrereqs:
+  - Prereqs.HasThrownAttackHit
+  - GleipnirPrereqs.HasSomeStamina
+
+# --------------------------------------------------------------------------------------------- STATUS EFFECTS ---------------------------------------------------------------------------------------------------
+
+# status effect to makes mjolnir return to the owner
+GleipnirStatusEffects.RemoveThrowableCooldown:
+  $type: gamedataStatusEffect_Record
+  gameplayTags:
+  - IconicPunkKnifeRemoveCooldown
+
+# makes enemies electrocuted and shows icon on their head
+GleipnirStatusEffects.Conductive:
+  $type: gamedataStatusEffect_Record
+  AIData: BaseStatusEffect.BaseEMP_inline4
+  duration:
+    statModifiers:
+    - GleipnirStats.ConductiveDuration
+  statusEffectType: BaseStatusEffectTypes.EMP
+  stopActiveSfxOnDeactivate: True
+  uiData: StatusEffectUi.Conductive
+  gameplayTags:
+  - Debuff
+  - Conductive
+  immunityStats:
+  - BaseStats.EMPImmunity
+  packages:
+  - BaseStatusEffect.BaseEMP_inline8
+  VFX:
+  - BaseStatusEffect.BaseEMP_inline3
+
+# --------------------------------------------------------------------------------------------- ATTACKS ----------------------------------------------------------------------------------------------------------
+
+# attack that does high DOT with electric damage
+GleipnirAttacks.ConductiveStrongAttack:
+  $base: Attacks.EmpBlastStrongArms
+  range: 0
+  statusEffects:
+    - !remove Attacks.EmpBlastStrongArms_inline1
+
+# AOE eletric attack
+GleipnirAttacks.LightningStrike:
+  $type: gamedataAttack_GameEffect_Record
+  attackTag: Electrocuted
+  effectName: explosions # tells the game to pick explosion from explosions.es file (ep1\gameplay\game_effects\attack_effects\explosions\explosions.es)
+  effectTag: emp_explosion # tells the game the explosion tag in the explosion file (which explosion to play)
+  attackType: AttackType.Explosion
+  className: Attack_GameEffect
+  damageType: DamageTypes.Electric
+  staminaCost: [15]
+  statModifiers:
+  - GleipnirStats.LightningStrikeElectricDamage
+
+# attack that stuns nearby enemies and does low damage
+GleipnirAttacks.ParalyzingElectrocution:
+  $type: gamedataAttack_GameEffect_Record
+  effectName: weaponShoot
+  effectTag: chain_lightning
+  attackType: AttackType.Effect
+  className: Attack_GameEffect
+  userDataPath: Attacks.Bullet_GameEffect
+  hitFlags:
+  - ChainLightning
+  statusEffects: 
+  - $type: gamedataStatusEffectAttackData_Record
+    applyImmediately: True
+    stacksToApply: 1
+    statusEffect: BaseStatusEffect.ExplosionStun
+  statModifiers:
+  - GleipnirStats.ParalyzingElectrocutionElectricDamage
+
+# attack to blind enemies
+GleipnirAttacks.BlindingLights:
+  $type: gamedataAttack_GameEffect_Record
+  attackTag: Electrocuted
+  effectName: explosions # tells the game to pick explosion from explosions.es file (ep1\gameplay\game_effects\attack_effects\explosions\explosions.es)
+  effectTag: emp_explosion # tells the game the explosion tag in the explosion file (which explosion to play)
+  attackType: AttackType.Explosion
+  className: Attack_GameEffect
+  damageType: DamageTypes.Electric
+  range: 10
+  statusEffects: 
+  - $type: gamedataStatusEffectAttackData_Record
+    applyImmediately: True
+    stacksToApply: 1
+    statusEffect: BaseStatusEffect.Blind
+  - $type: gamedataStatusEffectAttackData_Record
+    applyImmediately: True
+    stacksToApply: 1
+    statusEffect: 
+      $base: GleipnirStatusEffects.Conductive
+      duration:
+        statModifiers:
+        - GleipnirStats.ConductiveExtraDuration
+
+# attack to cripple enemy movement
+GleipnirAttacks.Electrocute:
+  $base: Attacks.EmpBlastStrongArms
+  range: 0
+  statusEffects:
+  - !remove Attacks.EmpBlastStrongArms_inline0
+  - !append-once 
+    $type: gamedataStatusEffectAttackData_Record
+    applyImmediately: True
+    stacksToApply: 1
+    statusEffect: BaseStatusEffect.EmpLowDamage
+
+# --------------------------------------------------------------------------------------------- STATS ------------------------------------------------------------------------------------------------------------
+
+# duration for conductive status effect
+GleipnirStats.ConductiveDuration:
+  $type: ConstantStatModifier
+  statType: BaseStats.MaxDuration
+  modifierType: Additive
+  value: 3
+
+# duration for conductive status effect
+GleipnirStats.ConductiveExtraDuration:
+  $type: ConstantStatModifier
+  statType: BaseStats.MaxDuration
+  modifierType: Additive
+  value: 6
+
+# electric damage to be applied on lightning strike
+GleipnirStats.LightningStrikeElectricDamage:
+  $type: gamedataConstantStatModifier_Record
+  value: 1000
+  modifierType: Additive
+  statType: BaseStats.ElectricDamage
+
+# electric damage to be applied on lightning strike
+GleipnirStats.ParalyzingElectrocutionElectricDamage:
+  $type: gamedataConstantStatModifier_Record
+  value: 300
+  modifierType: Additive
+  statType: BaseStats.ElectricDamage
