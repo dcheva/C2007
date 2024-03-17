@@ -1,5 +1,5 @@
 {
-    "version": 126,
+    "version": 129,
     "data": [
         {
             "group_name": "/controls/fppcameramouse",
@@ -973,6 +973,12 @@
                     "default_value": "IK_Q"
                 },
                 {
+                    "name": "dropCarriedObject",
+                    "type": "name",
+                    "value": "IK_Q",
+                    "default_value": "IK_Q"
+                },
+                {
                     "name": "reload",
                     "type": "name",
                     "value": "IK_R",
@@ -1015,10 +1021,10 @@
                     "default_value": "IK_T"
                 },
                 {
-                    "name": "radio",
+                    "name": "pocketRadio",
                     "type": "name",
                     "value": "IK_Z",
-                    "default_value": "None"
+                    "default_value": "IK_Z"
                 },
                 {
                     "name": "openNotifiation",
@@ -2582,6 +2588,12 @@
                     "type": "name",
                     "value": "IK_V",
                     "default_value": "IK_V"
+                },
+                {
+                    "name": "crystalCoat",
+                    "type": "name",
+                    "value": "IK_Y",
+                    "default_value": "IK_Y"
                 }
             ]
         },
