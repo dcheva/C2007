@@ -4,8 +4,9 @@
 - Change Branch and other names too dee21
 - Remove art.bat
 
-## C2077 2.11
+## C2077 2.12
 
 - Update installed
 - Add new
 - Ignore large files in repo
+- Ignore AMM mods
